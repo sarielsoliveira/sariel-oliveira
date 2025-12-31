@@ -1,0 +1,68 @@
+/* about.css - Estilos específicos da página About */
+
+/* CONTAINER ABOUT */
+.about-container {
+    width: 1243px;
+    height: 900px;
+    background-color: rgba(195, 226, 175, 0.5);
+    margin: 100px auto; /* AJUSTE AQUI: margin-top e margin-bottom */
+    padding: 80px;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+
+.about-title {
+    font-family: 'Kotta One', serif;
+    font-size: 36px;
+    color: #7aa7a7;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.about-text {
+    font-family: 'Martel', serif;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.8; /* equivalente a ~36px */
+  letter-spacing: 2px;
+  color: #000;
+}
+
+
+/* RESPONSIVO ABOUT */
+@media (max-width: 768px) {
+    .about-container {
+        width: 95%;
+        height: auto;
+        min-height: 1200px;
+        padding: 40px 30px;
+        margin: 50px auto; /* AJUSTE AQUI */
+    }
+    
+    .about-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+    
+    .about-text {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        padding: 30px 20px;
+        margin: 30px auto; /* AJUSTE AQUI */
+    }
+    
+    .about-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .about-text {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+}

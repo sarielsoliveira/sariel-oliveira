@@ -1,0 +1,713 @@
+/* ======= PAWME.CSS - VERSÃO COM CONTROLE INDIVIDUAL ======= */
+
+/* ===== RESET & BASE ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  font-family: 'Koulen', sans-serif;
+  color: #000;
+}
+
+/* ===== NAVBAR (IGUAL AO DOA) ===== */
+.navbar {
+  width: 100%;
+  background-color: #D1F2F4;
+  border-bottom: 2px solid #000;
+}
+
+.navbar-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.logo {
+  width: 315px;
+  height: auto;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 79px;
+}
+
+.nav-links a {
+  font-family: 'Koulen', sans-serif;
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
+  letter-spacing: 1.68px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #22A47F;
+  transform: scale(1.2);
+}
+
+/* ===== HERO SECTION ===== */
+.hero-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  text-align: center;
+  background: rgba(240, 235, 174, 0.5);
+  border-radius: 12px;
+  min-height: 450px;
+}
+
+.hero-title {
+  font-family: 'Inria Serif', serif;
+  font-size: 80px;
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 40px auto 20px;
+  letter-spacing: 2px;
+  color: #F8DC8E;
+  -webkit-text-stroke: 3px #376B6C;
+  text-stroke: 3px #376B6C;
+}
+
+.hero-subtitle {
+  font-family: 'Balthazar', serif;
+  font-size: 32px;
+  margin: 20px auto 40px;
+  max-width: 800px;
+  letter-spacing: 3px;
+  line-height: 1.4;
+  color: #000;
+}
+
+.hero-author {
+  font-family: 'Balthazar', serif;
+  font-size: 25px;
+  margin: 40px auto;
+  max-width: 600px;
+  letter-spacing: 1px;
+}
+
+.author-label {
+  color: #7f7d7d;
+}
+
+.author-name {
+  color: #000;
+}
+
+/* ===== OVERVIEW SECTION ===== */
+.overview-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  margin: 110px 0 20px 0;
+  color: #000;
+  text-align: center;
+}
+
+.subtitle-pawme {
+  font-family: 'Inria Serif', serif;
+  font-weight: 400;
+  font-size: 48px;
+  letter-spacing: 4px;
+  text-align: center;
+  color: #FBDC8E;
+  -webkit-text-stroke: 1.5px #376B6C;
+  text-stroke: 1.5px #376B6C;
+  margin: 0 0 20px 0;
+}
+
+.overview-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+/* ===== IMAGE 1 - Overview Pawme ===== */
+.pawme-image1 {
+  display: block;
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  margin: 40px auto 60px;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== PROJECT DURATION ===== */
+.project-duration-title {
+  font-family: 'Martel', serif;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  margin: 110px 0 10px 0;
+  color: #000;
+  text-align: center;
+}
+
+.project-duration-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  color: #000;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* ===== MY ROLE ===== */
+.myrole-title {
+  font-family: 'Martel', serif;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  margin: 40px 0 10px 0;
+  color: #000;
+  text-align: center;
+}
+
+.myrole-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  color: #000;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto 20px auto;
+}
+
+/* ===== RESPONSIBILITIES ===== */
+.respons-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  margin: 40px 0 20px 0;
+  color: #000;
+  text-align: center;
+}
+
+.respons-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 40px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.respons-item {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+/* ===== PAPER WIREFRAMES ===== */
+.paperwire-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  margin: 140px 0 10px 0;
+  color: #000;
+  text-align: center;
+}
+
+/* ===== IMAGE 2 - Paper Wireframe ===== */
+.pawme-image2 {
+  display: block;
+  max-width: 750px;
+  width: 100%;
+  height: auto;
+  margin: 30px auto 20px;
+  border-radius:0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== IMAGE 3 - Paper Wireframe ===== */
+.pawme-image3 {
+  display: block;
+  max-width: 1100px;
+  width: 100%;
+  height: auto;
+  margin: 40px auto 60px;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== USABILITY TESTING ===== */
+.usability-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  margin: 200px 0 30px 0;
+  color: #000;
+  text-align: center;
+}
+
+.usability-details {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  margin: 30px auto;
+  max-width: 1000px;
+}
+
+.usability-item {
+  text-align: center;
+  max-width: 250px;
+}
+
+.usability-label {
+  display: block;
+  font-family: 'Martel', serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.usability-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  color: #000;
+}
+
+.usability-duration {
+  display: flex;
+  justify-content: center;
+  margin: 40px auto;
+}
+
+/* ===== FINDINGS ===== */
+.findings-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  margin: 150px 0 20px 0;
+  color: #000;
+  text-align: center;
+}
+
+.findings-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 2.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+  
+}
+/* ===== FINDINGS The usability study revealed several key findings:===== */
+.bold-text {
+    font-weight: 700; /* ou 600 para negrito médio */
+}
+/* ===== LOW-FIDELITY PROTOTYPE ===== */
+.lowfi-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  margin: 120px 0 20px 0;
+  color: #000;
+  text-align: center;
+}
+
+/* ===== IMAGE 4 - Low-Fidelity ===== */
+.pawme-image4 {
+  display: block;
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  margin: 40px auto 0px;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.lowfi-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+}
+
+
+/* ===== IMAGE 5 - Low-Fidelity ===== */
+.pawme-image5 {
+  display: block;
+  max-width: 1100px;
+  width: 100%;
+  height: auto;
+  margin: 20px auto 60px;
+  border-radius: 7px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* ===== PRIMARY USER FLOW ===== */
+.primaryflow-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  margin: 60px 0 10px 0;
+  color: #000;
+  text-align: center;
+}
+
+.primaryflow-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+/* ===== HIGH-FIDELITY PROTOTYPE ===== */
+.highfi-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  margin: 150px 0 20px 0;
+  color: #000;
+  text-align: center;
+}
+
+/* ===== IMAGE 6 - High-Fidelity ===== */
+.pawme-image6 {
+  display: block;
+  max-width: 1100px;
+  width: 100%;
+  height: auto;
+  margin: 40px auto 60px;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.highfi-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+/* ===== IMAGE 7 - High-Fidelity ===== */
+.pawme-image7 {
+  display: block;
+  max-width: 1100px;
+  width: 100%;
+  height: auto;
+  margin: 80px auto 60px;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== IMAGE 8 - High-Fidelity ===== */
+.pawme-image8 {
+  display: block;
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  margin: 100px auto 70px;
+  border-radius: 7px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== PRIMARY USER FLOW (SEGUNDA VEZ) ===== */
+/* Nota: Esta é a segunda ocorrência no HTML, mantenha separado se quiser estilos diferentes */
+
+/* ===== RESPONSIVE DESIGN ===== */
+.responsive-title {
+  font-family: 'Martel', serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  margin: 150px 0 10px 0;
+  color: #000;
+  text-align: center;
+}
+
+.responsive-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+}
+
+/* ===== IMAGE 9 - Responsive Design ===== */
+.pawme-image9 {
+  display: block;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  margin: 60px auto 60px;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== CONCLUSIONS ===== */
+.conclusions-title {
+  font-family: 'Martel', serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  margin: 200px 0 20px 0;
+  color: #000;
+  text-align: center;
+}
+
+/* ===== IMPACT ===== */
+.impact-subtitle {
+  font-family: 'Martel', serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 35px 0 15px 0;
+  color: #000;
+  text-align: center;
+}
+
+.impact-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+.impact-text.quote {
+  font-style: italic;
+  font-weight: 400;
+  color: #444;
+  max-width: 900px;
+  margin: 20px auto 40px auto;
+}
+
+/* ===== WHAT I LEARNED ===== */
+.learned-subtitle {
+  font-family: 'Martel', serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 90px 0 15px 0;
+  color: #000;
+  text-align: center;
+}
+
+.learned-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+/* ===== LET'S CONNECT ===== */
+.connect-title {
+  font-family: 'Martel', serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-align: center;
+  margin: 200px 0 200px 0;
+  color: #ff4081;
+  background: linear-gradient(90deg, #ff4081, #ff9800, #4caf50, #2196f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* ===== RESPONSIVO (NAVBAR IGUAL AO DOA) ===== */
+@media (max-width: 768px) {
+  /* Navbar responsiva */
+  .navbar-inner {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .nav-links a {
+    font-size: 20px;
+  }
+  
+  /* Hero Section responsivo */
+  .hero-container {
+    padding: 30px 15px;
+    margin: 30px auto;
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: 48px;
+    margin: 20px auto;
+    -webkit-text-stroke: 2px #376B6C;
+    text-stroke: 2px #376B6C;
+  }
+
+  .hero-subtitle {
+    font-size: 24px;
+    margin: 20px auto 30px;
+  }
+
+  .hero-author {
+    font-size: 20px;
+    margin: 30px auto;
+  }
+
+  /* Títulos responsivos */
+  .overview-title,
+  .project-duration-title,
+  .myrole-title,
+  .respons-title,
+  .paperwire-title,
+  .usability-title,
+  .findings-title,
+  .lowfi-title,
+  .primaryflow-title,
+  .highfi-title,
+  .responsive-title,
+  .conclusions-title {
+    font-size: 24px;
+    margin: 30px 0 15px;
+  }
+
+  .subtitle-pawme {
+    font-size: 36px;
+    -webkit-text-stroke: 1px #376B6C;
+    text-stroke: 1px #376B6C;
+  }
+
+  /* Textos responsivos */
+  .overview-text,
+  .project-duration-text,
+  .myrole-text,
+  .respons-item,
+  .findings-text,
+  .lowfi-text,
+  .primaryflow-text,
+  .highfi-text,
+  .responsive-text,
+  .impact-text,
+  .learned-text {
+    font-size: 18px;
+  }
+
+  /* Usability Testing responsivo */
+  .usability-details {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .usability-item {
+    max-width: 100%;
+  }
+
+  .usability-label {
+    font-size: 20px;
+  }
+
+  .usability-text {
+    font-size: 18px;
+  }
+
+  /* Imagens responsivas */
+  .pawme-image1,
+  .pawme-image2,
+  .pawme-image3,
+  .pawme-image4,
+  .pawme-image5,
+  .pawme-image6,
+  .pawme-image7,
+  .pawme-image8,
+  .pawme-image9 {
+    margin: 20px auto;
+    max-width: 90%;
+  }
+
+  .pawme-image9 {
+    max-width: 80%;
+  }
+
+  /* Subtítulos responsivos */
+  .impact-subtitle,
+  .learned-subtitle {
+    font-size: 20px;
+  }
+
+  /* Let's Connect responsivo */
+  .connect-title {
+    font-size: 28px;
+    margin: 100px 0;
+  }
+}

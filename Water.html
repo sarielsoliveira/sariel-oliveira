@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Water - Sariel Oliveira</title>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Martel:wght@300;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="water.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-inner">
+            <a href="index.html"><img src="assets/logo-sariel.png" alt="Logo" class="logo"/></a>
+            <nav class="nav-links">
+                <a href="contact.html">CONTACT</a>
+                <a href="work.html">WORK</a>
+                <a href="about.html">ABOUT</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="water-content">
+        <div class="water-header">
+            <div class="water-title-container"><h1 class="water-title">"Light and Water: Origins"</h1></div>
+            <div class="water-description">
+                <p>This photographic series explores waterfalls through an abstract lens, capturing the interplay of light and water as a metaphor for life itself. I allow light to imprint itself on the moving water, revealing ephemeral patterns and luminous textures that are invisible to the naked eye.</p>
+            </div>
+        </div>
+
+        <div class="water-gallery">
+            <div class="water-image-full"><img src="Water-image/LIght (1).jpg" alt="Origins" class="water-img" data-lightbox="water-gallery"></div>
+
+            <div class="water-image-row">
+                <img src="Water-image/LIght (28).jpg" alt="Origins" class="water-img-half" data-lightbox="water-gallery">
+                <img src="Water-image/LIght (26).jpg" alt="Origins" class="water-img-half" data-lightbox="water-gallery">
+            </div>
+
+            <div class="water-image-vertical"><img src="Water-image/LIght (23).jpg" alt="Origins" class="water-img-vertical" data-lightbox="water-gallery"></div>
+            <div class="water-image-full"><img src="Water-image/LIght (27).jpg" alt="Origins" class="water-img" data-lightbox="water-gallery"></div>
+            <div class="water-image-full"><img src="Water-image/LIght (24).jpg" alt="Origins" class="water-img" data-lightbox="water-gallery"></div>
+            <div class="water-image-wide"><img src="Water-image/Group 109.png" alt="Origins" class="water-img-wide" data-lightbox="water-gallery"></div>
+            <div class="water-image-full"><img src="Water-image/LIght (20).jpg" alt="Origins" class="water-img" data-lightbox="water-gallery"></div>
+            <div class="water-image-vertical"><img src="Water-image/LIght (21).jpg" alt="Origins" class="water-img-vertical" data-lightbox="water-gallery"></div>
+
+            <div class="water-description-bottom">
+                <p>Each image is a meditation on the elemental forces that sustain us. Water flows, light dances—and together they evoke the genesis of life.</p>
+            </div>
+
+            <div class="water-image-row">
+                <img src="Water-image/LIght (8).jpg" alt="Origins" class="water-img-half" data-lightbox="water-gallery">
+                <img src="Water-image/LIght (2).jpg" alt="Origins" class="water-img-half" data-lightbox="water-gallery">
+            </div>
+
+            <div class="water-image-full"><img src="Water-image/LIght (17).jpg" alt="Origins" class="water-img" data-lightbox="water-gallery"></div>
+
+            <div class="water-image-row-double">
+                <img src="Water-image/LIght (14).jpg" alt="Origins" class="water-img-half" data-lightbox="water-gallery">
+                <img src="Water-image/LIght (15).jpg" alt="Origins" class="water-img-half" data-lightbox="water-gallery">
+            </div>
+
+            <div class="water-image-full"><img src="Water-image/LIght (11).jpg" alt="Origins" class="water-img" data-lightbox="water-gallery"></div>
+
+            <div class="water-image-row">
+                <img src="Water-image/LIght (5).jpg" alt="Origins" class="water-img-half" data-lightbox="water-gallery">
+                <img src="Water-image/LIght (6).jpg" alt="Origins" class="water-img-half" data-lightbox="water-gallery">
+            </div>
+
+            <div class="water-description-bottom">
+                <p>Light becomes visible, water becomes luminous, and the viewer is invited to contemplate the essence of vitality.</p>
+            </div>
+
+            <div class="water-image-row-double">
+                <img src="Water-image/LIght (33).jpg" alt="Origins" class="water-img-half" data-lightbox="water-gallery">
+                <img src="Water-image/LIght (32).jpg" alt="Origins" class="water-img-half" data-lightbox="water-gallery">
+            </div>
+
+            <div class="water-image-vertical"><img src="Water-image/LIght (29).jpg" alt="Origins" class="water-img-vertical" data-lightbox="water-gallery"></div>
+            <div class="water-image-full"><img src="Water-image/LIght (35).jpg" alt="Origins" class="water-img" data-lightbox="water-gallery"></div>
+            <div class="water-image-full"><img src="Water-image/LIght (36).jpg" alt="Origins" class="water-img" data-lightbox="water-gallery"></div>
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-prev">&#10094;</span>
+        <span class="lightbox-next">&#10095;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="Gallery Image" draggable="false">
+        </div>
+        <div class="lightbox-footer">
+            <div class="lightbox-counter"><span id="current-index">1</span> / <span id="total-images"></span></div>
+        </div>
+    </div>
+
+    
+
+
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('[data-lightbox="water-gallery"]');
+    const lightbox = document.getElementById('lightbox');
+    const lbImage = document.getElementById('lightbox-image');
+    const currIdxTxt = document.getElementById('current-index');
+    const totalTxt = document.getElementById('total-images');
+    const btnNext = document.querySelector('.lightbox-next');
+    const btnPrev = document.querySelector('.lightbox-prev');
+    
+    let idx = 0;
+    let currentScale = 1;
+    let currentTranslateX = 0;
+    let currentTranslateY = 0;
+    let isDragging = false;
+    let dragStartX = 0, dragStartY = 0;
+    let initialPinchDistance = 0;
+    let initialScale = 1;
+    let swipeStartX = 0;
+    let wasZooming = false; 
+
+    totalTxt.textContent = images.length;
+
+    function updateImage() {
+        currentScale = 1; currentTranslateX = 0; currentTranslateY = 0;
+        updateTransform();
+        lbImage.src = images[idx].src;
+        currIdxTxt.textContent = idx + 1;
+    }
+
+    function updateTransform() {
+        if (currentScale <= 1) {
+            currentScale = 1; currentTranslateX = 0; currentTranslateY = 0;
+            if (window.innerWidth > 768) {
+                btnNext.style.opacity = "1"; btnPrev.style.opacity = "1";
+                btnNext.style.visibility = "visible"; btnPrev.style.visibility = "visible";
+            }
+        } else {
+            btnNext.style.opacity = "0"; btnPrev.style.opacity = "0";
+            btnNext.style.visibility = "hidden"; btnPrev.style.visibility = "hidden";
+        }
+        lbImage.style.transform = `translate(${currentTranslateX}px, ${currentTranslateY}px) scale(${currentScale})`;
+    }
+
+    const open = (i) => { 
+        idx = i; updateImage(); 
+        lightbox.style.display = 'flex'; 
+        setTimeout(() => lightbox.classList.add('active'), 10); 
+        document.body.style.overflow = 'hidden'; 
+    };
+    
+    // FUNÇÃO DE FECHAR CORRIGIDA
+    const closeVisual = () => { 
+        // 1. Faz o scroll para a foto atual antes de fechar
+        if (images[idx]) {
+            images[idx].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        // 2. Fecha o lightbox
+        lightbox.classList.remove('active'); 
+        setTimeout(() => { lightbox.style.display = 'none'; }, 300); 
+        document.body.style.overflow = 'auto'; 
+    };
+
+    const next = () => { idx = (idx + 1) % images.length; updateImage(); };
+    const prev = () => { idx = (idx - 1 + images.length) % images.length; updateImage(); };
+
+    images.forEach((img, i) => img.addEventListener('click', () => open(i)));
+
+    // MODIFICADO: Agora chama closeVisual direto em vez de history.back
+    document.querySelector('.lightbox-close').addEventListener('click', closeVisual);
+
+    btnNext.addEventListener('click', (e) => { e.stopPropagation(); next(); });
+    btnPrev.addEventListener('click', (e) => { e.stopPropagation(); prev(); });
+
+    // Arrastar no Mouse
+    lbImage.addEventListener('mousedown', (e) => {
+        if (currentScale > 1) {
+            isDragging = true;
+            dragStartX = e.clientX - currentTranslateX;
+            dragStartY = e.clientY - currentTranslateY;
+            e.preventDefault();
+        }
+    });
+    window.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        currentTranslateX = e.clientX - dragStartX;
+        currentTranslateY = e.clientY - dragStartY;
+        updateTransform();
+    });
+    window.addEventListener('mouseup', () => { isDragging = false; });
+
+    // Zoom Mouse
+    lightbox.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        const delta = e.deltaY > 0 ? -0.2 : 0.2;
+        currentScale = Math.min(Math.max(1, currentScale + delta), 4);
+        updateTransform();
+    }, { passive: false });
+
+    // Touch Mobile
+    lightbox.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 2) {
+            wasZooming = true;
+            initialPinchDistance = Math.hypot(e.touches[0].pageX - e.touches[1].pageX, e.touches[0].pageY - e.touches[1].pageY);
+            initialScale = currentScale;
+        } else if (e.touches.length === 1) {
+            swipeStartX = e.touches[0].clientX;
+            if (currentScale > 1) {
+                isDragging = true;
+                dragStartX = e.touches[0].clientX - currentTranslateX;
+                dragStartY = e.touches[0].clientY - currentTranslateY;
+            }
+        }
+    }, { passive: false });
+
+    lightbox.addEventListener('touchmove', (e) => {
+        if (e.touches.length === 2) {
+            e.preventDefault();
+            const currentDistance = Math.hypot(e.touches[0].pageX - e.touches[1].pageX, e.touches[0].pageY - e.touches[1].pageY);
+            currentScale = Math.min(Math.max(1, initialScale * (currentDistance / initialPinchDistance)), 4);
+            updateTransform();
+        } else if (e.touches.length === 1 && isDragging && currentScale > 1) {
+            e.preventDefault();
+            currentTranslateX = e.touches[0].clientX - dragStartX;
+            currentTranslateY = e.touches[0].clientY - dragStartY;
+            updateTransform();
+        }
+    }, { passive: false });
+
+    lightbox.addEventListener('touchend', (e) => {
+        isDragging = false;
+        
+        // Se for um toque simples (sem zoom)
+        if (e.changedTouches.length === 1 && currentScale === 1 && !wasZooming) {
+            const swipeEndX = e.changedTouches[0].clientX;
+            const diff = swipeStartX - swipeEndX;
+            const screenWidth = window.innerWidth;
+
+            // Se o movimento foi um deslize (swipe) maior que 50px
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) next(); // Deslizou para a esquerda -> Próxima
+                else prev();        // Deslizou para a direita -> Anterior
+            } 
+            // Se foi apenas um toque (tap) rápido
+            else if (Math.abs(diff) < 10) {
+                // Se tocou no lado esquerdo da tela (menos de 50%)
+                if (swipeEndX < screenWidth / 2) {
+                    prev();
+                } 
+                // Se tocou no lado direito da tela (mais de 50%)
+                else {
+                    next();
+                }
+            }
+        }
+
+        if (e.touches.length === 0) {
+            if (currentScale <= 1) updateTransform();
+            setTimeout(() => { wasZooming = false; }, 300);
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (lightbox.style.display === 'flex') {
+            if (e.key === 'Escape') closeVisual();
+            if (currentScale === 1) {
+                if (e.key === 'ArrowRight') next();
+                if (e.key === 'ArrowLeft') prev();
+            }
+        }
+    });
+});
+</script>

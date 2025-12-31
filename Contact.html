@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Sariel Oliveira</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kotta+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balthazar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Martel:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="navbar-inner">
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo-sariel.png" alt="Logo Sariel Oliveira" class="logo">
+            </a>
+            <nav class="nav-links">
+                <a href="contact.html" style="color: #22A47F;">CONTACT</a>
+                <a href="work.html">WORK</a>
+                <a href="about.html">ABOUT</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact-main">
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <div class="contact-hero-content">
+                <h1 class="contact-hero-title">Let's get in touch!</h1>
+                <p class="contact-hero-subtitle">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="contact-info-section">
+            <div class="contact-info-container">
+                <!-- Email -->
+                <div class="contact-info-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3 class="contact-label">Email</h3>
+                        <a href="mailto:sariel.soliveira@gmail.com" class="contact-value email-link">
+                            sariel.soliveira@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile -->
+                <div class="contact-info-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3 class="contact-label">Mobile</h3>
+                        <a href="tel:+34643131172" class="contact-value phone-link">
+                            +34 64 3131 172
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Location -->
+                <div class="contact-info-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3 class="contact-label">Location</h3>
+                        <p class="contact-value location-text">
+                            Málaga, Andalucía<br>
+                            Spain
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media -->
+        <section class="social-section">
+            <h2 class="social-title">Connect with me</h2>
+            <div class="social-icons">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/sarieloliveira/" target="_blank" class="social-icon instagram" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span class="social-label">Instagram</span>
+                </a>
+                
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/sarieloliveira/" target="_blank" class="social-icon linkedin" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span class="social-label">LinkedIn</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="contact-footer">
+        <div class="footer-content">
+            <p class="footer-text">
+                © <span id="currentYear"></span> Sariel Oliveira. All rights reserved.
+            </p>
+            <p class="footer-note">
+                Designed and developed with passion
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

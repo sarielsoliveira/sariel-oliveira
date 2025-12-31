@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work - Sariel Oliveira</title>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balthazar&display=swap" rel="stylesheet">
+    <style>
+        /* CSS NAVBAR */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            background-color: #FAF3F3;
+            font-family: 'Koulen', sans-serif;
+        }
+        
+        .navbar {
+            width: 100%;
+            background-color: #D1F2F4;
+            border-bottom: 2px solid #000;
+        }
+        
+        .navbar-inner {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 40px 64px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            width: 315px;
+            height: auto;
+            cursor: pointer;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 79px;
+        }
+        
+        .nav-links a {
+            font-size: 24px;
+            color: #000;
+            text-decoration: none;
+            letter-spacing: 1.68px;
+            transition: color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-links a:hover {
+            color: #22A47F;
+            transform: scale(1.2);
+        }
+        
+        /* CSS WORK CONTAINER */
+        .work-container {
+            width: 1029px;
+            height: 565px;
+            background-color: rgba(110, 184, 162, 0.336);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 100px auto;
+            text-align: center;
+            border-radius: 12px;
+        }
+        
+        .work-image {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 0px;
+        }
+        
+        .work-text {
+            font-family: 'Balthazar', serif;
+            font-size: 52px;
+            color: #0A3D3D;
+            text-align: center;
+            max-width: 900px;
+            line-height: 1.2;
+            margin: 100px 0;
+            padding: 0;
+        }
+        
+        /* RESPONSIVO */
+        @media (max-width: 1100px) {
+            .work-container {
+                width: 95%;
+                height: auto;
+                min-height: 500px;
+                padding: 30px 20px;
+                margin: 50px auto;
+            }
+            
+            .work-text {
+                font-size: 36px;
+                max-width: 90%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-inner {
+                flex-direction: column;
+                align-items: center;
+                padding: 24px;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 16px;
+                margin-top: 16px;
+            }
+            
+            .work-container {
+                width: 90%;
+                min-height: 400px;
+                margin: 30px auto;
+                padding: 20px 15px;
+            }
+            
+            .work-text {
+                font-size: 28px;
+                max-width: 95%;
+                line-height: 1.3;
+                margin: 50px 0;
+            }
+            
+            .work-image {
+                width: 120px;
+                height: 120px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .work-container {
+                min-height: 350px;
+                margin: 35px auto;
+            }
+            
+            .work-text {
+                font-size: 22px;
+                line-height: 1.4;
+                margin: 30px 0;
+            }
+            
+            .work-image {
+                width: 500px;
+                height: 100px;
+            }
+            
+            .logo {
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="navbar-inner">
+            <a href="index.html">
+                <img src="assets/logo-sariel.png" alt="Logo Sariel Oliveira" class="logo"/>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="contact.html">CONTACT</a>
+                <a href="work.html" style="color: #22A47F;">WORK</a>
+                <a href="about.html">ABOUT</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- WORK CONTAINER -->
+    <div class="work-container">
+        <img src="image-Work/image1.svg" alt="Work in progress" class="work-image">
+        <p class="work-text">Work in progress – more to come soon!</p>
+    </div>
+</body>
+</html>

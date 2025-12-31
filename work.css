@@ -1,0 +1,72 @@
+/* style.css - Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #FAF3F3;
+    font-family: 'Koulen', sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #D1F2F4;
+    border-bottom: 2px solid #000;
+}
+
+.navbar-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 315px;
+    height: auto;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 79px;
+}
+
+.nav-links a {
+    font-size: 24px;
+    color: #000;
+    text-decoration: none;
+    letter-spacing: 1.68px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.nav-links a:hover {
+    color: #22A47F;
+    transform: scale(1.2);
+}
+
+/* Responsivo navbar */
+@media (max-width: 768px) {
+    .navbar-inner {
+        flex-direction: column;
+        align-items: center;
+        padding: 24px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 16px;
+    }
+    
+    .logo {
+        width: 250px;
+    }
+}

@@ -1,0 +1,668 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Koulen', sans-serif;
+  background-color: #fff; /* Fundo branco igual Doa */
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background-color: #D1F2F4;
+  border-bottom: 2px solid #000;
+}
+
+.navbar-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+  width: 315px;
+  height: auto;
+  display: block;
+}
+.logo-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 79px;
+}
+
+.nav-item {
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
+  letter-spacing: 1.68px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  font-family: 'Koulen', sans-serif;
+}
+
+.nav-item:hover {
+  color: #22A47F;
+  transform: scale(1.2);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .navbar-inner {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+  }
+}
+
+/* Adicione esta seção no CSS (substituindo as anteriores) */
+
+/* =========== HERO SECTION ARTORBIT =========== */
+.hero-artorbit {
+  background-color: rgba(164, 233, 166, 0.5); /* Fundo original do ArtOrbit */
+  border-radius: 12px;
+  padding: 100px 60px;
+  text-align: center;
+  margin: 80px auto;
+  max-width: 1200px;
+  min-height: 450px;
+}
+
+.hero-title-artorbit {
+  font-family: 'Inria Serif', serif; /* Fonte original */
+  font-size: 80px;
+  font-weight: normal;
+  line-height: 1.2;
+  max-width: 800px;
+  margin: 0px auto;
+  letter-spacing: 2px;
+}
+
+.hero-art {
+  color: #fb8552; /* Laranja original */
+  font-size: 64px;
+  letter-spacing: 1.2px;
+}
+
+.hero-orbit {
+  color: #73ac68; /* Verde original */
+  font-size: 64px;
+  letter-spacing: 1.2px;
+}
+
+.hero-subtitle-artorbit {
+  font-family: 'Balthazar', serif; /* Fonte original */
+  font-size: 28px;
+  margin: 50px auto;
+  max-width: 1000px;
+  letter-spacing: 3px;
+  line-height: 1.4;
+  color: #000;
+}
+
+.hero-author-artorbit {
+  font-family: 'Balthazar', serif; /* Fonte original */
+  font-size: 25px;
+  margin: 60px auto;
+  max-width: 1000px;
+  letter-spacing: 1px;
+}
+
+.hero-author-artorbit .author-label { 
+  color: #7f7d7d; /* Cinza original */
+}
+
+.hero-author-artorbit .author-name { 
+  color: #000; /* Preto original */
+}
+
+
+/* =========== OVERVIEW SECTION =========== */
+.overview-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  margin: 40px 0 20px 0;
+  color: #000;
+  text-align: center;
+}
+
+.overview-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* =========== OVERVIEW HIGHLIGHT =========== */
+.overview-highlight {
+  color: #fc8653; /* Laranja original do ArtOrbit */
+  font-weight: 700;
+}
+.overview-orbit {
+  color: #73ac68; /* Verde original do ArtOrbit */
+  font-weight: 700;
+}
+
+/* =========== IMAGENS =========== */
+/* Imagem 1 */
+.artorbit-image1 {
+  display: block;
+  max-width: 700px; /* Igual ao doa-image1 */
+  width: 100%;
+  height: auto;
+  margin: 40px auto 60px;
+  border-radius: 12px;
+}
+
+/* =========== PROJECT DURATION =========== */
+.project-duration-title {
+  font-family: 'Martel', serif;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  margin: 40px 0 10px 0;
+  color: #000;
+  text-align: center;
+}
+
+.project-duration-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  color: #000;
+  text-align: center;
+}
+
+/* =========== MY ROLE =========== */
+.myrole-title {
+  font-family: 'Martel', serif;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  margin: 40px 0 10px 0;
+  color: #000;
+  text-align: center;
+}
+
+.myrole-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  color: #000;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* =========== RESPONSIBILITIES =========== */
+.respons-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  margin: 60px 0 20px 0;
+  color: #000;
+  text-align: center;
+}
+
+.respons-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.respons-item {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+/* =========== PAPER WIREFRAMES =========== */
+.paperwire-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  margin: 110px 0 10px 0;
+  color: #000;
+  text-align: center;
+}
+
+/* Imagem 2 */
+.artorbit-image2 {
+  display: block;
+  max-width: 1100px; /* Igual ao doa-image2 */
+  width: 100%;
+  height: auto;
+  margin: 50px auto 20px;
+  border-radius: 12px;
+}
+
+.paperwire-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 800px;
+  margin: 0 auto 0px auto;
+  text-align: center;
+}
+
+/* Imagem 3 */
+.artorbit-image3 {
+  display: block;
+  max-width: 300px; /* Igual ao doa-image3 */
+  width: 100%;
+  height: auto;
+  margin: 40px auto 60px;
+  border-radius: 12px;
+}
+
+/* Imagem 4 */
+.artorbit-image4 {
+  display: block;
+  max-width: 1100px; /* Igual ao doa-image4 */
+  width: 100%;
+  height: auto;
+  margin: 40px auto 60px;
+  border-radius: 0px;
+}
+
+/* =========== LOW-FIDELITY PROTOTYPE =========== */
+.lowfi-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  margin: 100px 0 0px 0;
+  color: #000;
+  text-align: center;
+}
+
+/* Imagem 5 */
+.artorbit-image5 {
+  display: block;
+  max-width: 800px; /* Igual ao doa-image5 */
+  width: 100%;
+  height: auto;
+  margin: 0px auto 30px;
+  border-radius: 12px;
+}
+
+.lowfi-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 800px;
+  margin: 0 auto 0px auto;
+  text-align: center;
+}
+
+/* Imagem 6 */
+.artorbit-image6 {
+  display: block;
+  max-width: 900px; /* Tamanho adaptado */
+  width: 100%;
+  height: auto;
+  margin: 90px auto 110px;
+  border-radius: 0px;
+}
+
+/* =========== PRIMARY USER FLOW =========== */
+.primaryflow-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  margin: 60px 0 20px 0;
+  color: #000;
+  text-align: center;
+}
+
+.primaryflow-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+/* =========== USABILITY TESTING =========== */
+.usability-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  margin: 200px 0 0px 0;
+  color: #000;
+  text-align: center;
+}
+
+.usability-details {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  margin: 60px auto;
+  max-width: 1000px;
+}
+
+.usability-item {
+  text-align: center;
+  max-width: 250px;
+}
+
+.usability-label {
+  display: block;
+  font-family: 'Martel', serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.usability-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  color: #000;
+}
+
+.usability-duration {
+  display: flex;
+  justify-content: center;
+  margin: 40px auto;
+}
+
+/* =========== FINDINGS =========== */
+.findings-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  margin: 150px 0 20px 0;
+  color: #000;
+  text-align: center;
+}
+
+.findings-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+/* Imagem 8 */
+.artorbit-image8 {
+  display: block;
+  max-width: 900px; /* Tamanho similar */
+  width: 100%;
+  height: auto;
+  margin: 90px auto 60px;
+  border-radius: 0px;
+}
+
+/* =========== HIGH-FIDELITY PROTOTYPE =========== */
+.highfi-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  margin: 150px 0 0px 0;
+  color: #000;
+  text-align: center;
+}
+
+/* Imagem 9 */
+.artorbit-image9 {
+  display: block;
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  margin: 20px auto 60px;
+  border-radius: 0px;
+}
+
+.highfi-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+/* Imagem 10 */
+.artorbit-image10 {
+  display: block;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin: 80px auto 60px;
+  border-radius: 0px;
+}
+
+/* Imagem 11 */
+.artorbit-image11 {
+  display: block;
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  margin: 100px auto 60px;
+  border-radius: 0px;
+}
+
+/* =========== SECONDARY USER FLOW =========== */
+.secondary-title {
+  font-family: 'Martel', serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  margin: 40px 0 10px 0;
+  color: #000;
+  text-align: center;
+}
+
+.secondary-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1250px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+/* =========== CONCLUSIONS =========== */
+.conclusions-title {
+  font-family: 'Martel', serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  margin: 200px 0 20px 0;
+  color: #000;
+  text-align: center;
+}
+
+/* =========== IMPACT =========== */
+.impact-subtitle {
+  font-family: 'Martel', serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 35px 0 15px 0;
+  color: #000;
+  text-align: center;
+}
+
+.impact-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+.impact-text em {
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* =========== WHAT I LEARNED =========== */
+.learned-subtitle {
+  font-family: 'Martel', serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 90px 0 15px 0;
+  color: #000;
+  text-align: center;
+}
+
+.learned-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+/* =========== LET'S CONNECT =========== */
+.connect-title {
+  font-family: 'Martel', serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-align: center;
+  margin: 200px 0 200px 0;
+  color: #ff4081;
+  background: linear-gradient(90deg, #ff4081, #ff9800, #4caf50, #2196f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* =========== RESPONSIVO =========== */
+@media (max-width: 768px) {
+  .usability-details {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 0 16px;
+    max-width: 100%;
+  }
+
+  .usability-item {
+    max-width: 100%;
+  }
+
+  .usability-label {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+
+  .usability-text {
+    font-size: 18px;
+    letter-spacing: 1.2px;
+  }
+
+  /* Ajustes para imagens em mobile */
+  .artorbit-image1,
+  .artorbit-image2,
+  .artorbit-image3,
+  .artorbit-image4,
+  .artorbit-image5,
+  .artorbit-image6,
+  .artorbit-image8,
+  .artorbit-image9,
+  .artorbit-image10,
+  .artorbit-image11 {
+    max-width: 90%;
+    margin: 20px auto 40px;
+  }
+
+  .hero-artorbit {
+    padding: 80px 20px;
+    margin: 40px auto;
+  }
+
+  .hero-title-artorbit {
+    font-size: 48px;
+    letter-spacing: 4px;
+  }
+
+  .hero-subtitle-artorbit {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+}

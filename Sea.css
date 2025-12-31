@@ -1,0 +1,456 @@
+/* sea.css - Estilos específicos da página Sea - VERSÃO COM LIGHTBOX DO WATER */
+
+/* RESET BÁSICO PARA O CONTEÚDO SEA */
+.sea-content {
+    margin: 100px auto !important;
+    max-width: 1280px !important;
+    padding: 0 64px !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* CABEÇALHO - ESTILOS GARANTIDOS */
+.sea-header {
+    margin-bottom: 80px !important;
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+    position: relative !important;
+}
+
+.sea-title-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 24px 120px !important;
+    margin-bottom: 24px !important;
+    width: 100% !important;
+}
+
+.sea-title {
+    font-family: 'Martel', serif !important;
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    color: #2A4F3F !important;
+    text-align: center !important;
+    letter-spacing: 3.2px !important;
+    line-height: 42px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+}
+
+.sea-description {
+    padding: 0 10px !important;
+    margin-bottom: 64px !important;
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.sea-description p,
+.sea-description-bottom p {
+    font-family: 'Martel', serif !important;
+    font-size: 20px !important;
+    font-weight: 300 !important;
+    color: #000000 !important;
+    text-align: center !important;
+    line-height: 42px !important;
+    letter-spacing: 2px !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    display: block !important;
+}
+
+.sea-description-bottom {
+    padding: 0 10px !important;
+    margin: 64px 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+}
+
+/* Galeria - mantém igual */
+.sea-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    margin-bottom: 100px;
+}
+
+/* Tipos de imagens - SEM SOMBRA POR PADRÃO */
+.sea-image-full {
+    padding: 0 111px;
+}
+
+.sea-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sea-img:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 25px rgba(42, 79, 63, 0.15);
+}
+
+.sea-image-row {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 0;
+}
+
+.sea-img-half {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sea-img-half:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 25px rgba(42, 79, 63, 0.15);
+}
+
+.sea-image-vertical {
+    padding: 0 81px;
+}
+
+.sea-img-vertical {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sea-img-vertical:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 25px rgba(42, 79, 63, 0.15);
+}
+
+.sea-image-wide {
+    padding: 0 10px;
+}
+
+.sea-img-wide {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sea-img-wide:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 25px rgba(42, 79, 63, 0.15);
+}
+
+/* =========================================
+   LIGHTBOX - VERSÃO DO WATER (COM ZOOM E ARRASTE)
+   ========================================= */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* FUNDO BRANCO SÓLIDO */
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    touch-action: none;
+}
+
+.lightbox.active {
+    opacity: 1;
+    display: flex;
+}
+
+.lightbox-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#lightbox-image {
+    max-width: 90%;
+    max-height: 85%;
+    object-fit: contain;
+    user-select: none;
+    cursor: grab;
+    border-radius: 0px !important; /* SEM BORDER RADIUS */
+    transition: opacity 0.3s ease;
+}
+
+#lightbox-image.can-drag {
+    cursor: grab;
+}
+
+#lightbox-image.dragging {
+    cursor: grabbing;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #333; /* COR PRETA PARA CONTRASTAR COM FUNDO BRANCO */
+    font-size: 45px;
+    cursor: pointer;
+    z-index: 10001;
+    transition: color 0.3s ease;
+}
+
+.lightbox-close:hover {
+    color: #2A4F3F;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333; /* COR PRETA PARA CONTRASTAR COM FUNDO BRANCO */
+    font-size: 50px;
+    cursor: pointer;
+    padding: 20px;
+    z-index: 10001;
+    transition: color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.5); /* FUNDO BRANCO SEMI-TRANSPARENTE */
+    border-radius: 50%;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    color: #2A4F3F;
+}
+
+.lightbox-prev {
+    left: 10px;
+}
+
+.lightbox-next {
+    right: 10px;
+}
+
+/* Contador e legenda - AJUSTADOS PARA FUNDO BRANCO */
+.lightbox-counter {
+    position: absolute;
+    bottom: 30px;
+    right: 60px;
+    color: #666; /* COR CINZA PARA CONTRASTAR COM FUNDO BRANCO */
+    font-family: 'Martel', serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    z-index: 10001;
+}
+
+.lightbox-caption {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    width: 100%;
+    color: #666; /* COR CINZA PARA CONTRASTAR COM FUNDO BRANCO */
+    font-family: 'Martel', serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 0;
+    letter-spacing: 0.5px;
+    z-index: 10001;
+}
+
+/* Garante que as setas tenham uma transição suave ao sumir */
+.lightbox-prev,
+.lightbox-next {
+    transition: opacity 0.3s ease, visibility 0.3s ease, color 0.3s ease;
+}
+
+/* =========================================
+   RESPONSIVIDADE MOBILE - IMAGENS MAIS LARGAS
+   ========================================= */
+@media (max-width: 768px) {
+    .sea-content {
+        margin: 50px auto !important;
+        padding: 0 5px !important; /* REDUZIDO PARA AS IMAGENS OCUPAREM MAIS ESPAÇO */
+        max-width: 100% !important; /* OCUPA TODA A LARGURA */
+    }
+
+    .sea-title {
+        font-size: 28px !important;
+        letter-spacing: 2.8px !important;
+        line-height: 36px !important;
+    }
+
+    .sea-description p,
+    .sea-description-bottom p {
+        font-size: 18px !important;
+        line-height: 32px !important;
+        letter-spacing: 1.8px !important;
+        padding: 0 15px !important; /* MANTÉM UM POUCO DE PADDING NO TEXTO */
+    }
+
+    .sea-title-container {
+        padding: 20px 10px !important; /* REDUZIDO PARA OCUPAR MAIS ESPAÇO */
+    }
+
+    /* TODAS AS IMAGENS OCUPAM QUASE 100% DA LARGURA */
+    .sea-image-full,
+    .sea-image-vertical,
+    .sea-image-wide {
+        padding: 0 5px !important; /* MÍNIMO PADDING PARA NÃO COLAR NAS BORDAS */
+        width: 100%;
+    }
+    
+    /* GARANTE QUE AS IMAGENS LARGAS FICARÃO MAIS LARGAS */
+    .sea-image-wide {
+        padding: 0 5px !important;
+    }
+    
+    .sea-image-full .sea-img,
+    .sea-image-vertical .sea-img-vertical,
+    .sea-image-wide .sea-img-wide {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* LINHAS DE IMAGENS VIRAM COLUNA */
+    .sea-image-row {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 5px !important;
+    }
+
+    .sea-img-half {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* REDUZ O ESPAÇO ENTRE AS IMAGENS */
+    .sea-gallery {
+        gap: 40px;
+        margin-bottom: 80px;
+    }
+
+    /* Ajustes do Lightbox para Mobile */
+    .lightbox-prev,
+    .lightbox-next {
+        display: none;
+    }
+
+    #lightbox-image {
+        max-height: 75vh;
+        max-width: 95%;
+    }
+
+    .lightbox-close {
+        top: 15px;
+        right: 20px;
+        font-size: 40px;
+    }
+
+    .lightbox-counter {
+        bottom: 20px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .lightbox-caption {
+        bottom: 50px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sea-content {
+        margin: 30px auto !important;
+        padding: 0 2px !important; /* PRATICAMENTE SEM PADDING */
+    }
+
+    .sea-title {
+        font-size: 24px !important;
+        letter-spacing: 2.4px !important;
+        line-height: 32px !important;
+    }
+
+    .sea-description p,
+    .sea-description-bottom p {
+        font-size: 16px !important;
+        line-height: 28px !important;
+        letter-spacing: 1.6px !important;
+        padding: 0 10px !important;
+    }
+
+    /* IMAGENS OCUPAM PRATICAMENTE 100% DA TELA */
+    .sea-image-full,
+    .sea-image-vertical,
+    .sea-image-wide,
+    .sea-image-row {
+        padding: 0 2px !important;
+    }
+    
+    /* IMAGENS LARGAS ESPECIALMENTE GRANDES */
+    .sea-image-wide .sea-img-wide {
+        width: calc(100vw - 4px) !important; /* OCUPA QUASE TODA A LARGURA VISÍVEL */
+        margin-left: -2px;
+        margin-right: -2px;
+    }
+
+    .sea-gallery {
+        gap: 30px;
+    }
+}
+
+/* ADICIONAL: PARA TELAS MUITO PEQUENAS (iPhone SE, etc) */
+@media (max-width: 375px) {
+    .sea-content {
+        margin: 20px auto !important;
+        padding: 0 !important;
+    }
+    
+    .sea-title-container {
+        padding: 15px 5px !important;
+    }
+    
+    .sea-image-full,
+    .sea-image-vertical,
+    .sea-image-wide,
+    .sea-image-row {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .sea-image-wide .sea-img-wide {
+        width: 100vw !important;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .sea-gallery {
+        gap: 25px;
+    }
+}

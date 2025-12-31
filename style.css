@@ -1,0 +1,1804 @@
+body {
+  margin: 0;
+  background-color: #FAF3F3;
+  font-family: 'Koulen', sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #D1F2F4;
+  border-bottom: 2px solid #000; /* linha preta */
+}
+.sub-navbar {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+.navbar-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 315px;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 79px;
+}
+
+.nav-links a {
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
+  letter-spacing: 1.68px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.nav-links a:hover {
+  color: #22A47F;
+  transform: scale(1.2);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .navbar-inner {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+  }
+}
+
+
+
+* { 
+
+  box-sizing: border-box; 
+
+  margin: 0; 
+
+  padding: 0; 
+
+} 
+
+ 
+
+body { 
+
+  font-family: 'Koulen', sans-serif; 
+
+} 
+
+ 
+
+/* --- Carrossel de títulos --- */
+.animated-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+#title-box {
+  width: 100%;
+  max-width: 1260px;
+  height: 200px;       /* altura fixa */
+  min-height: 200px;   /* reserva espaço */
+  overflow: hidden;
+  position: relative;
+  background-color: #C2DFFF;
+}
+
+/* Slider vertical */
+#title-slider {
+  display: flex;
+  flex-direction: column;
+  transition: transform 600ms ease-in-out;
+}
+
+/* Cada linha de título */
+.title-line {
+  height: 200px; /* altura igual ao container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  line-height: 1;
+  text-align: center;
+  transition: all 250ms ease-in-out;
+}
+
+/* Efeito visual de "shrink" */
+.title-line.shrink {
+  opacity: 0.8;
+  letter-spacing: 2px;
+}
+
+/* Volta ao normal */
+.title-line.expand {
+  opacity: 1;
+  letter-spacing: 0.1em;
+}
+
+
+
+
+/* Reset básico */  
+
+ 
+
+* {  
+
+ 
+
+  box-sizing: border-box;  
+
+ 
+
+  margin: 0;  
+
+ 
+
+  padding: 0;  
+
+ 
+
+}  
+
+ 
+
+  
+
+ 
+
+body {  
+
+ 
+
+  font-family: 'Koulen', sans-serif;  
+
+ 
+
+  background-color: #fff; /* fundo neutro para evitar linhas */  
+
+ 
+
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+/* Container do título */ 
+
+.logo-uiux { 
+
+  display: flex; 
+
+  justify-content: center; 
+
+  align-items: center; 
+
+  width: calc(100% - 100px); /* 50px de cada lado em desktop */ 
+
+  max-width: 1340px; 
+
+  height: 222px; 
+
+  margin: 261px auto 80px auto; 
+
+  background-color: rgba(70, 184, 210, 0.7); 
+
+ 
+
+  /* animação inicial */ 
+
+  opacity: 0; 
+
+  transform: translateY(30px); 
+
+  border: none;       /* evita linha preta */ 
+
+  outline: none;      /* evita traços extras */ 
+
+} 
+
+.logo-uiux.animate { 
+
+  animation: fadeUpContainer 1.2s ease-out forwards; 
+
+} 
+
+/* Título */ 
+
+.logo-title { 
+
+  flex: 1; 
+
+  text-align: center; 
+
+  font-size: 48px; 
+
+  font-weight: normal; 
+
+  line-height: 1.2; 
+
+  letter-spacing: 0.1em; 
+
+  color: #FEF9F9; 
+
+ 
+
+  /* invisível até container aparecer */ 
+
+  opacity: 0; 
+
+  transform: translateY(20px); 
+
+} 
+
+ 
+
+.logo-title.animate { 
+
+  animation: fadeUpTitle 1.2s ease-out forwards; 
+
+  animation-delay: 0.4s; /* aparece depois do container */ 
+
+} 
+
+ 
+/* Keyframes */ 
+
+@keyframes fadeUpContainer { 
+
+  to { 
+
+    opacity: 1; 
+
+    transform: translateY(0); 
+
+  } 
+
+} 
+
+ 
+@keyframes fadeUpTitle { 
+
+  to { 
+
+    opacity: 1; 
+
+    transform: translateY(0); 
+
+  } 
+
+} 
+
+ 
+
+/* 📱 Responsividade para tablets */ 
+
+@media (max-width: 768px) { 
+
+  .logo-uiux { 
+
+    width: 100%; 
+
+    height: 180px; 
+
+    margin: 150px auto 100px auto; 
+
+    max-width: none; 
+
+  } 
+
+  .logo-title { 
+
+    font-size: 32px; 
+
+    letter-spacing: 0.08em; 
+
+  } 
+
+} 
+
+/* 📱 Responsividade para celulares */ 
+
+@media (max-width: 480px) { 
+
+  .logo-uiux { 
+
+    width: 100%; 
+
+    height: 160px; 
+
+    margin: 120px auto 80px auto; 
+
+    max-width: none; 
+
+  } 
+
+  .logo-title { 
+
+    font-size: 24px; 
+
+    letter-spacing: 0.06em; 
+
+  } 
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container principal */
+.project-doa {
+  max-width: 1266px;
+  margin: 0 auto 80px auto;
+}
+
+/* Box azul */
+.doa-box {
+  background: rgba(15, 141, 169, 0.5);
+  border-radius: 20px 20px 0 0;
+  padding: 20px 40px 20px 52px; /* top/right/bottom/left */
+}
+
+/* Grid com espaçamento fixo */
+.doa-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 53px;
+  align-items: center;
+}
+
+/* Foto */
+.image-box {
+  width: 622px;
+  height: 470px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Box de vídeo */
+.video-box {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Dimensões específicas */
+.video-1 {
+  width: 200px;
+  height: 424px;
+}
+
+.video-2 {
+  width: 200px;
+  height: 443px;
+}
+
+/* Ajuste em fullscreen */
+video:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain; /* mantém proporção sem cortar */
+  background: black;   /* fundo preto para vídeos verticais */
+}
+
+/* Footer (botão) */
+.doa-footer {
+  margin-top: 5px;
+  background: #64989A;
+  padding: 12px 20px;
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover no container */
+.doa-footer:hover {
+  background-color: #22A47F;
+}
+
+/* Texto dentro do botão */
+.view-more {
+  font-family: 'Kotta One', serif;
+  font-size: 32px;
+  color: #FFF4F4;
+  text-decoration: none;
+  letter-spacing: 4px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+/* Texto cresce quando o container está em hover */
+.doa-footer:hover .view-more {
+  transform: scale(1.1);
+}
+
+
+
+
+
+/* Estado inicial invisível */
+.project-doa.reveal-init {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Container animado */
+.project-doa.animate {
+  animation: fadeUpDoa 1.8s ease-out forwards;
+}
+
+/* Itens internos também invisíveis no início */
+.project-doa .image-box,
+.project-doa .video-box {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Quando container anima, os filhos aparecem em sequência */
+.project-doa.animate .image-box {
+  animation: fadeUpItem 1.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.project-doa.animate .video-1 {
+  animation: fadeUpItem 1.5s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.project-doa.animate .video-2 {
+  animation: fadeUpItem 1.5s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+/* Keyframes */
+@keyframes fadeUpDoa {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpItem {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* 📱 Responsividade */
+@media (max-width: 1366px) {
+  .project-doa {
+    max-width: 95%;
+  }
+
+  .doa-grid {
+    grid-template-columns: 3fr 1fr 1fr;
+  }
+
+  .image-box,
+  .video-1,
+  .video-2 {
+    width: 100%;
+    height: auto;
+  }
+
+  .view-more {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .doa-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .image-box,
+  .video-1,
+  .video-2 {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container principal */
+.project-ArtOrbit {
+  max-width: 1266px;
+  margin: 0 auto 80px auto;
+}
+
+/* Box */
+.ArtOrbit-box {
+  background: rgba(164, 233, 166, 0.5); /* #A4E9A6 com 50% de opacidade */
+  border-radius: 20px 20px 0 0;
+  padding: 20px 40px 20px 52px;
+}
+
+
+/* Grid */
+.ArtOrbit-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 53px;
+  align-items: center;
+}
+
+/* Foto */
+.image-box {
+  width: 622px;
+  height: 470px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Vídeos */
+.video-box {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.video-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.video-3 { width: 200px; height: 424px; }
+.video-4 { width: 200px; height: 443px; }
+
+/* Fullscreen */
+video:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain; /* mantém proporção sem cortar */
+  background: black;   /* fundo preto para vídeos verticais */
+}
+
+/* Footer */
+.ArtOrbit-footer {
+  margin-top: 5px;
+  background: #7BA77D;
+  padding: 12px 20px;
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.ArtOrbit-footer:hover {
+  background-color: #22A47F;
+}
+.view-more {
+  font-family: 'Kotta One', serif;
+  font-size: 32px;
+  color: #FFF4F4;
+  letter-spacing: 4px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+.ArtOrbit-footer:hover .view-more {
+  transform: scale(1.1);
+}
+
+/* Scroll reveal inicial */
+.project-ArtOrbit.reveal-init {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Container animado */
+.project-ArtOrbit.animate {
+  animation: fadeUpArtOrbit 1.8s ease-out forwards;
+}
+
+/* Itens internos invisíveis no início */
+.project-ArtOrbit .image-box,
+.project-ArtOrbit .video-box {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Sequência de revelação */
+.project-ArtOrbit.animate .image-box {
+  animation: fadeUpItem 1.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+.project-ArtOrbit.animate .video-3 {
+  animation: fadeUpItem 1.5s ease-out forwards;
+  animation-delay: 1s;
+}
+.project-ArtOrbit.animate .video-4 {
+  animation: fadeUpItem 1.5s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+/* Keyframes */
+@keyframes fadeUpArtOrbit {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeUpItem {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 1366px) {
+  .project-ArtOrbit { max-width: 95%; }
+  .ArtOrbit-grid { grid-template-columns: 3fr 1fr 1fr; }
+  .image-box, .video-3, .video-4 { width: 100%; height: auto; }
+  .view-more { font-size: 24px; }
+}
+@media (max-width: 1024px) {
+  .ArtOrbit-grid { grid-template-columns: 1fr; gap: 30px; }
+  .image-box, .video-3, .video-4 { max-width: 600px; width: 100%; height: auto; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Projeto Pawme --- */
+.project-pawme {
+  max-width: 1266px;
+  margin: 0 auto 80px auto;
+}
+
+/* Box principal */
+.pawme-box {
+  background: rgba(114, 180, 149); /* pode trocar a cor */
+  border-radius: 20px 20px 0 0;
+  padding: 20px 40px 20px 52px;
+}
+
+/* Grid: foto + vídeo lado a lado */
+.pawme-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Foto responsiva */
+.project-pawme .image-box {
+  max-width: 546px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.project-pawme .image-box img {
+  width: 100%;
+  height: auto;       /* mantém proporção */
+  object-fit: cover;
+  display: block;
+}
+
+/* Vídeo responsivo */
+.project-pawme .video-box {
+  max-width: 546px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.project-pawme .video-box video {
+  width: 100%;
+  height: auto;       /* mantém proporção */
+  object-fit: cover;
+  display: block;
+}
+
+/* Footer (botão) */
+.pawme-footer {
+  margin-top: 5px;
+  background: #599679;
+  padding: 12px 20px;
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.pawme-footer:hover {
+  background-color: #22A47F;
+}
+.pawme-footer .view-more {
+  font-family: 'Kotta One', serif;
+  font-size: 24px;
+  color: #FFF4F4;
+  letter-spacing: 4px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  text-decoration: none; /* remove sublinhado */
+}
+.pawme-footer:hover .view-more {
+  transform: scale(1.1);
+}
+
+/* Scroll reveal inicial */
+.project-pawme.reveal-init {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.project-pawme.animate {
+  animation: fadeUpPawme 1.8s ease-out forwards;
+}
+
+/* Itens internos invisíveis no início */
+.project-pawme .image-box,
+.project-pawme .video-box {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Sequência de revelação */
+.project-pawme.animate .image-box {
+  animation: fadeUpItem 1.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+.project-pawme.animate .video-box {
+  animation: fadeUpItem 1.5s ease-out forwards;
+  animation-delay: 1s;
+}
+
+/* Keyframes */
+@keyframes fadeUpPawme {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeUpItem {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .pawme-grid {
+    grid-template-columns: 1fr; /* empilha verticalmente */
+    gap: 30px;
+  }
+  .project-pawme .image-box,
+  .project-pawme .video-box {
+    max-width: 100%;
+  }
+  .project-pawme .image-box img,
+  .project-pawme .video-box video {
+    width: 100%;
+    height: auto; /* escala junto com container */
+  }
+  .pawme-footer .view-more {
+    font-size: 24px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Logo AudioVisual --- */
+.logo-audiovisual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 100px); /* margem lateral */
+  max-width: 1266px;
+  height: 254px;
+  margin: 200px auto 40px auto;
+  background-color: #22A47F; /* cor de fundo */
+  border: none;
+  outline: none;
+
+  /* animação inicial */
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.logo-audiovisual.animate {
+  animation: fadeUpContainer 1.2s ease-out forwards;
+}
+
+.logo-title {
+  flex: 1;
+  text-align: center;
+  font-family: 'Koulen', sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 6.2px;
+  color: #FFF;
+
+  /* invisível até container aparecer */
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.logo-title.animate {
+  animation: fadeUpTitle 1.2s ease-out forwards;
+  animation-delay: 0.4s; /* aparece depois do container */
+}
+
+/* Keyframes */
+@keyframes fadeUpContainer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpTitle {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .logo-audiovisual {
+    width: 100%;
+    height: 200px;
+    margin: 150px auto 100px auto;
+    max-width: none;
+  }
+  .logo-title {
+    font-size: 32px;
+    letter-spacing: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-audiovisual {
+    height: 160px;
+    margin: 120px auto 80px auto;
+  }
+  .logo-title {
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+}
+
+
+
+
+
+/* --- Texto abaixo da Logo AudioVisual --- */
+.logo-description {
+  max-width: 1200px;
+  margin: 5px auto 80px auto;
+  text-align: center;
+
+  /* invisível até animação */
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.logo-description.animate {
+  animation: fadeUpDescription 1.2s ease-out forwards;
+}
+
+.description-text {
+  font-family: 'Martel', serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.8; /* equivalente a ~36px */
+  letter-spacing: 2px;
+  color: #000;
+}
+
+/* Keyframes */
+@keyframes fadeUpDescription {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .description-text {
+    font-size: 30px;
+    line-height: 1.6;
+  }
+}
+@media (max-width: 480px) {
+  .description-text {
+    font-size: 20px !important;    /* Tente diminuir para 16px para testar se muda */
+    line-height: 1.5 !important;
+    display: block !important;     /* Garante que ele se comporte como bloco */
+    width: 90% !important;         /* Ajusta a largura no celular */
+    margin-left: auto !important;
+    margin-right: auto !important;
+  
+  }
+}
+
+
+
+
+
+/* --- Vídeo abaixo da Logo AudioVisual --- */
+.logo-video {
+  max-width: 966px;
+  margin: 40px auto 100px auto;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.logo-video.animate {
+  animation: fadeUpVideo 1.2s ease-out forwards;
+}
+
+.logo-video .video-box {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.logo-video .video-box video {
+  width: 100%;
+  height: auto; /* responsivo */
+  display: block;
+  object-fit: cover;
+}
+
+/* Keyframes */
+@keyframes fadeUpVideo {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .logo-video {
+    margin: 30px auto 80px auto;
+  }
+}
+@media (max-width: 480px) {
+  .logo-video {
+    margin: 20px auto 60px auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --- Logo Fineart --- */
+.logo-fineart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 100px);
+  max-width: 1266px;
+  margin: 300px auto 10px auto;
+  background-color: transparent; /* sem fundo, só a logo */
+  border: none;
+  outline: none;
+
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.logo-fineart.animate {
+  animation: fadeUpLogo 1.2s ease-out forwards;
+}
+
+.logo-box {
+  text-align: center;
+}
+
+.logo-image {
+  max-width: 700px; /* ajuste conforme necessário */
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Keyframes */
+@keyframes fadeUpLogo {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 968px) {
+  .logo-image {
+    max-width: 600px;
+  }
+}
+@media (max-width: 680px) {
+  .logo-image {
+    max-width: 2000px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Container principal --- */
+.light-container {
+  display: grid;
+  grid-template-columns: 576px 1fr;
+  gap: 40px;
+  max-width: 1226px;
+  height: auto; /* ajusta ao conteúdo */
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 15px;
+  background: #D8DED5;
+
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.light-container.animate {
+  animation: fadeUpContainer 1.2s ease-out forwards;
+}
+
+/* --- Foto --- */
+.light-image {
+  border-radius: 20px;
+  overflow: hidden;
+}
+.light-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* --- Texto --- */
+.light-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.light-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: #A97D5A;
+  text-align: center;
+  letter-spacing: 3.2px;
+
+  opacity: 0;
+  transform: translateY(20px);
+}
+.light-title.animate {
+  animation: fadeUpItem 1.2s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.light-description {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(20px);
+}
+.light-description.animate {
+  animation: fadeUpItem 1.2s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+/* --- Botão --- */
+.light-footer {
+  background: #B78759;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.light-footer:hover {
+  background-color: #22A47F;
+}
+.view-gallery {
+  font-family: 'Martel', serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #FFF;
+  letter-spacing: 1.8px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+.light-footer:hover .view-gallery {
+  transform: scale(1.1);
+}
+
+/* --- Keyframes --- */
+@keyframes fadeUpContainer {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUpItem {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsividade --- */
+@media (max-width: 1024px) {
+  .light-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .light-title { font-size: 28px; }
+  .light-description { font-size: 18px; }
+}
+@media (max-width: 480px) {
+  .light-title { font-size: 24px; }
+  .light-description { font-size: 16px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Container principal --- */
+.sea-container {
+  display: grid;
+  grid-template-columns: 576px 1fr;
+  gap: 40px;
+  max-width: 1226px;
+  margin: 100px auto;
+  padding: 30px;
+  border-radius: 15px;
+  background: #D8DED5; /* cor do container */
+
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.sea-container.animate {
+  animation: fadeUpContainer 1.2s ease-out forwards;
+}
+
+/* --- Foto --- */
+.sea-image {
+  border-radius: 20px;
+  overflow: hidden;
+}
+.sea-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* --- Texto --- */
+.sea-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.sea-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: #2A4F3F; /* cor do título */
+  text-align: center;
+  letter-spacing: 3.2px;
+
+  opacity: 0;
+  transform: translateY(20px);
+}
+.sea-title.animate {
+  animation: fadeUpItem 1.2s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.sea-description {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(20px);
+}
+.sea-description.animate {
+  animation: fadeUpItem 1.2s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+/* --- Botão --- */
+.sea-footer {
+  background: #2A4F3F; /* cor do container do botão */
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.sea-footer:hover {
+  background-color: #22A47F; /* tom mais escuro no hover */
+}
+.view-gallery {
+  font-family: 'Martel', serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #FFF;
+  letter-spacing: 1.8px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+.sea-footer:hover .view-gallery {
+  transform: scale(1.1);
+}
+
+/* --- Keyframes --- */
+@keyframes fadeUpContainer {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUpItem {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsividade --- */
+@media (max-width: 1024px) {
+  .sea-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .sea-title { font-size: 28px; }
+  .sea-description { font-size: 18px; }
+}
+@media (max-width: 480px) {
+  .sea-title { font-size: 24px; }
+  .sea-description { font-size: 16px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Container principal --- */
+.time-container {
+  display: grid;
+  grid-template-columns: 576px 1fr;
+  gap: 40px;
+  max-width: 1226px;
+  margin: 100px auto;
+  padding: 30px;
+  border-radius: 15px;
+  background: #D8DED5; /* cor do container */
+
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.time-container.animate {
+  animation: fadeUpContainer 1.2s ease-out forwards;
+}
+
+/* --- Foto --- */
+.time-image {
+  border-radius: 20px;
+  overflow: hidden;
+}
+.time-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* --- Texto --- */
+.time-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.time-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: #6E6C6F; /* cor do título */
+  text-align: center;
+  letter-spacing: 3.2px;
+
+  opacity: 0;
+  transform: translateY(20px);
+}
+.time-title.animate {
+  animation: fadeUpItem 1.2s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.time-description {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(20px);
+}
+.time-description.animate {
+  animation: fadeUpItem 1.2s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+/* --- Botão --- */
+.time-footer {
+  background: #6E6C6F; /* cor do botão */
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.time-footer:hover {
+  background-color: #22A47F; /* hover mais escuro */
+}
+.view-gallery {
+  font-family: 'Martel', serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #FFF;
+  letter-spacing: 1.8px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+.time-footer:hover .view-gallery {
+  transform: scale(1.1);
+}
+
+/* --- Keyframes --- */
+@keyframes fadeUpContainer {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUpItem {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsividade --- */
+@media (max-width: 1024px) {
+  .time-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .time-title { font-size: 28px; }
+  .time-description { font-size: 18px; }
+}
+@media (max-width: 480px) {
+  .time-title { font-size: 24px; }
+  .time-description { font-size: 16px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   CONFIGURAÇÕES PARA MOBILE (CELULAR/TABLET)
+   ========================================= */
+
+@media (max-width: 768px) {
+  
+  /* 1. DESATIVAR ANIMAÇÕES DE SCROLL
+     Força todos os elementos a ficarem visíveis imediatamente 
+     e remove o efeito de "subida" (transform) */
+     
+  .reveal-init,
+  .logo-uiux,
+  .logo-title,
+  .project-doa, .project-doa .image-box, .project-doa .video-box,
+  .project-ArtOrbit, .project-ArtOrbit .image-box, .project-ArtOrbit .video-box,
+  .project-pawme, .project-pawme .image-box, .project-pawme .video-box,
+  .logo-audiovisual, .logo-audiovisual .logo-title,
+  .logo-description,
+  .logo-video,
+  .logo-fineart,
+  .light-container, .light-title, .light-description,
+  .sea-container, .sea-title, .sea-description,
+  .time-container, .time-title, .time-description {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+  
+}
+
+
+
+
+/* =========================================
+   CONTROLE DE ESPAÇAMENTO (DISTÂNCIAS)
+   ========================================= */
+
+/* --- 🖥️ DISTÂNCIAS NO COMPUTADOR (Desktop) --- */
+/* (Estes valores já existem no seu CSS, coloquei aqui para referência visual. 
+   Se quiser mudar no PC, procure essas classes no código acima ou sobrescreva aqui) */
+
+.logo-uiux {
+  margin-bottom: 80px; /* Distância entre Título UX e Projeto Doa */
+}
+
+.project-doa, 
+.project-ArtOrbit, 
+.project-pawme {
+  margin-bottom: 80px; /* Distância entre os projetos */
+}
+
+.logo-audiovisual {
+  margin-top: 200px;   /* Distância acima do título Audiovisual */
+  margin-bottom: 40px; /* Distância abaixo do título Audiovisual */
+}
+
+.logo-description {
+  margin-bottom: 80px; /* Distância do texto descritivo para o vídeo reel */
+}
+
+.logo-video {
+  margin-bottom: 100px; /* Distância do vídeo reel para a logo Fine Art */
+}
+
+.logo-fineart {
+  margin-top: 300px; /* Distância grande antes da logo Fine Art */
+  margin-bottom: 10px;
+}
+
+.light-container, 
+.sea-container, 
+.time-container {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+
+/* --- 📱 DISTÂNCIAS NO CELULAR (Mobile) --- */
+/* (Altere os valores em PX abaixo para ajustar APENAS no celular) */
+
+@media (max-width: 768px) {
+
+  /* Espaço entre Título UX e primeiro projeto */
+  .logo-uiux {
+    margin-top: 100px !important;    /* Reduzido de 261px */
+    margin-bottom: 5px !important;  /* Reduzido de 80px */
+  }
+
+  /* Espaço entre os blocos de projetos (Doa, ArtOrbit, Pawme) */
+  .project-doa, 
+  .project-ArtOrbit, 
+  .project-pawme {
+    margin-bottom: 40px !important; /* Projetos mais colados no celular */
+  }
+
+  /* Espaço ao redor da Logo Audiovisual */
+  .logo-audiovisual {
+    margin-top: 200px !important;     /* Reduzido de 200px */
+    margin-bottom: 20px !important;
+    
+  }
+
+  /* Espaço do texto descritivo */
+  .logo-description {
+    margin-bottom: 40px !important;
+    
+  }
+
+  /* Espaço do Reel */
+  .logo-video {
+    margin-bottom: 60px !important;
+  }
+
+  /* Espaço da Logo Fine Art */
+  .logo-fineart {
+    margin-top: 200px !important;    /* Reduzido drasticamente de 300px */
+    margin-bottom: 20px !important;
+  }
+
+  /* Espaço entre as galerias (Light, Sea, Time) */
+  .light-container, 
+  .sea-container, 
+  .time-container {
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+  }
+}
+
+
+
+
+
+/* =========================================
+   AJUSTES ESPECÍFICOS DO TÍTULO ANIMADO (MOBILE)
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  /* 1. Controlar a distância (Margem) */
+  .animated-title {
+    /* No Desktop é 200px. Aqui você ajusta para o celular: */
+    margin-top: 100px !important;   
+    
+    /* Espaço entre o carrossel e o título "User Experience Designer" */
+    margin-bottom: 50px !important; 
+  }
+
+  /* 2. Controlar o tamanho da fonte */
+  .title-line {
+    /* No Desktop é 64px. Aqui você ajusta para o celular: */
+    font-size: 48px !important;
+    
+    /* OBS: A altura (height) deve continuar 200px ou a animação 
+       vai desenquadrar, pois o Javascript calcula baseado nisso. 
+       O texto ficará centralizado verticalmente nessa altura. */
+  }
+  
+  /* Ajuste opcional para a caixa colorida se comportar bem em telas pequenas */
+  #title-box {
+    max-width: 100% !important; /* Garante que não vaze a tela */
+    margin: 0 auto;            /* Centraliza a caixa */
+    border-radius: 0px;       /* Opcional: bordas arredondadas no mobile */
+  }
+
+}
+
+
+
+
+/* =========================================
+   AJUSTES FINAIS DE TÍTULOS E LOGOS (MOBILE)
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  /* 1. Título "User Experience Designer" (UI/UX) */
+  .logo-uiux .logo-title {
+    font-size: 38px !important;    /* Tamanho da fonte no celular */
+    line-height: 1.2 !important;   /* Espaçamento entre linhas */
+    letter-spacing: 1.8px !important;/* Espaçamento entre letras */
+  }
+
+  /* 2. Título "Exploring the audiovisual..." */
+  .logo-audiovisual .logo-title {
+    font-size: 38px !important;    /* Tamanho da fonte no celular */
+    line-height: 1 !important;
+    letter-spacing: 1.8px !important; 
+    padding: 0 10px;               /* Margem lateral segura para não colar na borda */
+  }
+
+  /* 3. Logo "Fine Art Photography" (Imagem) */
+  .logo-fineart .logo-image {
+    width: 100% !important;         /* Define a largura como 80% da tela */
+    max-width: 600px !important;   /* Trava um tamanho máximo em pixels */
+    height: auto !important;       /* Mantém a proporção correta */
+  }
+
+  /* 4. Remover bordas arredondadas do Vídeo Reel (Audiovisual) */
+  .logo-video .video-box {
+    border-radius: 0 !important;   /* Remove o arredondamento (cantos retos) */
+  }
+
+}
+
+
+
+
+
+

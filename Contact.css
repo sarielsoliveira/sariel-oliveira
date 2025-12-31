@@ -1,0 +1,361 @@
+/* ============================================
+   CONTACT PAGE STYLES - MODERN & MINIMALIST
+   ============================================ */
+
+/* === VARIABLES === */
+:root {
+    --primary-color: #376B6C;
+    --primary-light: #D1F2F4;
+    --accent-color: #F8DC8E;
+    --text-color: #333333;
+    --text-light: #666666;
+    --background-color: #FAF3F3;
+    --white: #FFFFFF;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* === RESET & BASE === */
+.contact-main {
+    background-color: var(--background-color);
+    min-height: calc(100vh - 200px);
+}
+
+/* === HERO SECTION === */
+.contact-hero {
+    padding: 120px 20px 80px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-light) 0%, rgba(209, 242, 244, 0.3) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%23376B6C" opacity="0.1"/></svg>');
+    opacity: 0.3;
+}
+
+.contact-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-hero-title {
+    font-family: 'Inria Serif', serif;
+    font-size: 64px;
+    font-weight: 400;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+
+.contact-hero-subtitle {
+    font-family: 'Martel', serif;
+    font-size: 20px;
+    color: var(--text-light);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+/* === CONTACT INFO SECTION === */
+.contact-info-section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-info-item {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(55, 107, 108, 0.1);
+}
+
+.contact-info-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    border-color: var(--primary-color);
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.contact-info-item:hover .contact-icon {
+    background: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.contact-icon i {
+    font-size: 24px;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.contact-info-item:hover .contact-icon i {
+    color: var(--white);
+}
+
+.contact-details {
+    flex: 1;
+}
+
+.contact-label {
+    font-family: 'Martel', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.contact-value {
+    font-family: 'Inria Serif', serif;
+    font-size: 22px;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+    display: block;
+    line-height: 1.4;
+}
+
+.email-link:hover,
+.phone-link:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.location-text {
+    font-family: 'Martel', serif;
+    color: var(--text-color);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* === SOCIAL SECTION (APENAS INSTAGRAM & LINKEDIN) === */
+.social-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: rgba(248, 220, 142, 0.1);
+}
+
+.social-title {
+    font-family: 'Inria Serif', serif;
+    font-size: 36px;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.social-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.social-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.social-icon:hover::before {
+    opacity: 1;
+}
+
+.social-icon i {
+    font-size: 32px;
+    color: var(--primary-color);
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.social-icon:hover i {
+    color: var(--white);
+    transform: scale(1.2);
+}
+
+.social-label {
+    font-family: 'Martel', serif;
+    font-size: 12px;
+    margin-top: 8px;
+    color: var(--text-light);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: var(--transition);
+    z-index: 1;
+}
+
+.social-icon:hover .social-label {
+    opacity: 1;
+    transform: translateY(0);
+    color: var(--white);
+}
+
+/* Cores individuais */
+.instagram:hover::before { background: #E1306C; }
+.linkedin:hover::before { background: #0077B5; }
+
+/* === FOOTER === */
+.contact-footer {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-text {
+    font-family: 'Martel', serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.footer-note {
+    font-family: 'Martel', serif;
+    font-size: 14px;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+    .contact-hero {
+        padding: 100px 20px 60px;
+    }
+    
+    .contact-hero-title {
+        font-size: 48px;
+    }
+    
+    .contact-hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .contact-info-section {
+        padding: 60px 20px;
+    }
+    
+    .contact-info-item {
+        padding: 30px 20px;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .contact-icon {
+        margin-bottom: 15px;
+    }
+    
+    .contact-value {
+        font-size: 20px;
+    }
+    
+    .social-title {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+    
+    .social-icons {
+        gap: 30px;
+    }
+    
+    .social-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .social-icon i {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero-title {
+        font-size: 36px;
+    }
+    
+    .contact-hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .contact-info-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-icons {
+        gap: 20px;
+    }
+    
+    .social-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .social-icon i {
+        font-size: 24px;
+    }
+}

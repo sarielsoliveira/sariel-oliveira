@@ -1,0 +1,277 @@
+/* water.css - Estilos específicos da página Water - V3 (Correção Mobile Layout) */
+
+/* --- LAYOUT GERAL --- */
+.water-content {
+    margin: 100px auto;
+    max-width: 1280px;
+    padding: 0 64px;
+}
+
+.water-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.water-title-container {
+    padding: 24px 120px;
+    margin-bottom: 24px;
+}
+
+.water-title {
+    font-family: 'Martel', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #A97D5A;
+    text-align: center;
+    letter-spacing: 3.2px;
+    line-height: 42px;
+}
+
+.water-description p,
+.water-description-bottom p {
+    font-family: 'Martel', serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #000000;
+    text-align: center;
+    line-height: 42px;
+    letter-spacing: 2px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.water-description-bottom {
+    margin: 64px 0;
+}
+
+/* Galeria */
+.water-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 100px;
+}
+
+.water-img, .water-img-half, .water-img-vertical, .water-img-wide {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Paddings Desktop */
+.water-image-full { padding: 0 111px; }
+.water-image-row { display: flex; justify-content: center; gap: 5px; }
+/* Row-double são as imagens verticais lado a lado */
+.water-image-row-double { display: flex; justify-content: center; gap: 5px; padding: 0 162px; }
+.water-img-half { flex: 1; max-width: 50%; }
+.water-image-vertical { padding: 0 214px; }
+.water-image-wide { padding: 0 62px; }
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   LIGHTBOX
+   ========================================= */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: #ffffff;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    /* Importante para o JS controlar os toques sem interferência do navegador */
+    touch-action: none; 
+}
+
+.lightbox.active { opacity: 1; display: flex; }
+
+.lightbox-content {
+    position: relative;
+    width: 100%; height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#lightbox-image {
+    max-width: 90%;
+    max-height: 85%;
+    object-fit: contain;
+    /* Transição removida aqui para não dar lag no arrastar. Será controlada via JS se necessário. */
+    user-select: none;
+    cursor: grab;
+}
+/* Cursor muda quando está com zoom */
+#lightbox-image.can-drag { cursor: grab; }
+#lightbox-image.dragging { cursor: grabbing; }
+
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 30px;
+    color: #333; font-size: 45px;
+    cursor: pointer; z-index: 10001;
+}
+
+.lightbox-prev, .lightbox-next {
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    color: #333; font-size: 50px;
+    cursor: pointer; padding: 20px; z-index: 10001;
+    background-color: rgba(255,255,255,0.5); /* Fundo para melhor visualização */
+    border-radius: 50%;
+}
+.lightbox-prev { left: 10px; }
+.lightbox-next { right: 10px; }
+
+.lightbox-footer {
+    position: absolute;
+    bottom: 30px; right: 60px;
+    z-index: 10001;
+}
+.lightbox-counter { font-family: 'Martel', serif; color: #666; font-size: 16px; }
+
+
+
+
+
+
+
+
+/* =========================================
+   RESPONSIVIDADE MOBILE CORRIGIDA
+   ========================================= */
+@media (max-width: 768px) {
+    .water-content { 
+        padding: 0 10px; 
+        margin-top: 50px; 
+    }
+    
+    .water-title-container { 
+        padding: 10px; 
+    }
+    
+    .water-title { 
+        font-size: 24px; 
+        line-height: 32px; 
+        letter-spacing: 1.5px; 
+    }
+    
+    .water-description p, 
+    .water-description-bottom p {
+        font-size: 16px; 
+        line-height: 26px; 
+        letter-spacing: 1px;
+    }
+
+    /* Reseta os paddings laterais para usar toda a largura disponível */
+    .water-image-full, 
+    .water-image-vertical, 
+    .water-image-wide,
+    .water-image-row-double { 
+        padding: 0; 
+    }
+    
+    /* ORGANIZAÇÃO VERTICAL NO MOBILE */
+    /* Faz com que todas as linhas (simples ou duplas) fiquem em coluna */
+    .water-image-row, 
+    .water-image-row-double { 
+        flex-direction: column !important; 
+        gap: 20px; 
+    }
+
+    /* Garante que as imagens ocupem a largura total da tela */
+    .water-img-half { 
+        max-width: 100%; 
+        width: 100%;
+    }
+
+    /* Ajustes do Lightbox para Mobile */
+    .lightbox-prev, .lightbox-next { display: none; } 
+    .lightbox-footer { width: 100%; right: 0; text-align: center; bottom: 20px; }
+    #lightbox-image { max-height: 75vh; max-width: 95%; }
+    .lightbox-close { top: 15px; right: 20px; font-size: 40px; }
+}
+
+/* Desativa o zoom no hover para mobile para evitar bugs visuais */
+    .water-img:hover, 
+    .water-img-half:hover, 
+    .water-img-vertical:hover, 
+    .water-img-wide:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+
+
+
+
+
+
+
+
+/* --- Efeito Hover na Galeria --- */
+
+/* Seleciona todas as imagens da galeria */
+.water-img, 
+.water-img-half, 
+.water-img-vertical, 
+.water-img-wide {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    
+    /* Define a suavidade da animação (0.4 segundos) */
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    /* Garante que a imagem não "vibre" ao animar */
+    backface-visibility: hidden;
+}
+
+/* O efeito de crescer ao passar o mouse (hover) */
+.water-img:hover, 
+.water-img-half:hover, 
+.water-img-vertical:hover, 
+.water-img-wide:hover {
+    /* Cresce 3% (1.03). Se quiser que cresça mais, aumente para 1.05 */
+    transform: scale(1.03);
+    
+    /* Opcional: Adiciona uma leve sombra para destacar a foto */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    
+    /* Garante que a imagem fique por cima das outras durante o zoom */
+    position: relative;
+    z-index: 10;
+}
+
+
+/* Cursor para indicar que a foto pode ser movida no Desktop */
+#lightbox-image.can-drag { cursor: grab; }
+#lightbox-image.dragging { cursor: grabbing; }
+
+/* Garante que as setas tenham uma transição suave ao sumir */
+.lightbox-prev, .lightbox-next {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
+
+
+
+
+
+

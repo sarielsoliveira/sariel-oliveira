@@ -1,0 +1,1415 @@
+/* Reset básico */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #fff; font-family: 'Koulen', sans-serif; }
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background-color: #D1F2F4;   /* cor de fundo */
+  border-bottom: 2px solid #000;
+}
+
+.navbar-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.logo {
+  width: 315px;
+  height: auto;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 79px;
+}
+
+.nav-links a {
+  font-family: 'Koulen', sans-serif;
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
+  letter-spacing: 1.68px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #22A47F;
+  transform: scale(1.2);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .navbar-inner {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .nav-links a {
+    font-size: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hero Section */
+.hero-doa {
+  background-color: #F2EFEE;   /* fundo independente */
+  border-radius: 12px;
+  padding: 150px 60px;
+  text-align: center;
+  margin: 80px auto;
+  max-width: 1280px;
+}
+
+.hero-title {
+  font-family: 'Barrio', cursive;
+  font-size: 72px;
+  color: #78E1AD;
+  letter-spacing: 7.2px;
+  margin-bottom: 35px;
+}
+
+.hero-subtitle {
+  font-family: 'Martel', serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 4px;
+  margin-bottom: 40px;
+}
+
+.hero-author {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  color: #808080;
+  letter-spacing: 3.2px;
+}
+
+.hero-author .author-name {
+  color: #161616;
+  font-weight: 700; /* negrito só no nome */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Título Overview */
+.overview-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  margin: 40px 0 20px 0; /* espaçamento acima/abaixo */
+  color: #000;
+  text-align: center; /* opcional */
+}
+
+/* Texto Overview */
+.overview-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1200px;   /* largura controlada */
+  margin: 0 auto;     /* centraliza horizontalmente */
+  text-align: center; /* opcional */
+}
+
+/* Destaque */
+.overview-highlight {
+  color: #78DAE1;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Imagem 1 do Projeto Doa */
+.doa-image1 {
+  display: block;          /* garante que seja um bloco */
+  max-width: 700px;        /* controla largura máxima */
+  width: 100%;             /* ocupa toda a largura disponível */
+  height: auto;            /* mantém proporção */
+  margin: 40px auto 60px;  /* centraliza horizontalmente e dá espaçamento */
+  border-radius: 0px;     /* bordas arredondadas */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Project Duration */
+.project-duration-title {
+  font-family: 'Martel', serif;
+  font-size: 25px;
+  font-weight: 700;       /* negrito */
+  letter-spacing: 3.2px;
+  margin: 40px 0 10px 0;  /* espaçamento acima/abaixo */
+  color: #000;
+  text-align: center;     /* opcional */
+}
+
+.project-duration-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  color: #000;
+  text-align: center;     /* opcional */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* My Role */
+.myrole-title {
+  font-family: 'Martel', serif;
+  font-size: 25px;
+  font-weight: 700;       /* negrito */
+  letter-spacing: 3.2px;
+  margin: 40px 0 10px 0;  /* espaçamento acima/abaixo */
+  color: #000;
+  text-align: center;     /* opcional */
+}
+
+.myrole-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300100;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  color: #000;
+  text-align: center;     /* opcional */
+  max-width: 300px;       /* controla largura máxima */
+  margin: 0 auto;         /* centraliza horizontalmente */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Título Responsabilidades */
+.respons-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;       /* negrito */
+  letter-spacing: 3.2px;
+  margin: 60px 0 20px 0;
+  color: #000;
+  text-align: center;     /* opcional */
+}
+
+/* Lista Responsabilidades */
+.respons-list {
+  list-style: none;       /* remove bullets padrão */
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;       /* controla largura máxima */
+  text-align: center;       /* texto alinhado à esquerda */
+}
+
+/* Item da lista */
+.respons-item {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  color: #000;
+  margin-bottom: 8px;     /* espaçamento entre itens */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Título Paper Wireframes */
+.paperwire-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;       /* negrito */
+  letter-spacing: 3.2px;
+  margin: 110px 0 10px 0;
+  color: #000;
+  text-align: center;     /* opcional */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Imagem 2 do Projeto Doa */
+.doa-image2 {
+  display: block;
+  max-width: 1100px;        /* controla largura máxima */
+  width: 100%;             /* ocupa toda a largura disponível */
+  height: auto;            /* mantém proporção */
+  margin: 10px auto 20px;  /* centraliza horizontalmente e dá espaçamento */
+  border-radius: 7px;     /* bordas arredondadas */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Texto Paper Wireframes */
+.paperwire-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 800px;       /* controla largura máxima */
+  margin: 0 auto 0px auto;
+  text-align: center;     /* centraliza o texto */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Imagem 3 do Projeto Doa */
+.doa-image3 {
+  display: block;
+  max-width: 800px;        /* controla largura máxima */
+  width: 100%;             /* ocupa toda a largura disponível */
+  height: auto;            /* mantém proporção */
+  margin: 40px auto 60px;  /* centraliza horizontalmente e dá espaçamento */
+  border-radius: 12px;     /* bordas arredondadas */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Imagem 4 do Projeto Doa */
+.doa-image4 {
+  display: block;
+  max-width: 1100px;        /* controla largura máxima */
+  width: 100%;             /* ocupa toda a largura disponível */
+  height: auto;            /* mantém proporção */
+  margin: 40px auto 60px;  /* centraliza horizontalmente e dá espaçamento */
+  border-radius: 0px;     /* bordas arredondadas */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Título Low-Fidelity Prototype */
+.lowfi-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;       /* negrito */
+  letter-spacing: 3.2px;
+  margin: 100px 0 20px 0;
+  color: #000;
+  text-align: center;     /* opcional */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Imagem 5 do Projeto Doa */
+.doa-image5 {
+  display: block;
+  max-width: 800px;        /* controla largura máxima */
+  width: 100%;             /* ocupa toda a largura disponível */
+  height: auto;            /* mantém proporção */
+  margin: 40px auto 30px;  /* centraliza horizontalmente e dá espaçamento */
+  border-radius: 7px;     /* bordas arredondadas */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Imagem 6 do Projeto Doa */
+.doa-image6 {
+  display: block;
+  max-width: 350px;        /* controla largura máxima */
+  width: 100%;             /* ocupa toda a largura disponível */
+  height: auto;            /* mantém proporção */
+  margin: 40px auto 60px;  /* centraliza horizontalmente e dá espaçamento */
+  border-radius: 12px;     /* bordas arredondadas */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Título Primary User Flow */
+.primaryflow-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;       /* negrito */
+  letter-spacing: 3.2px;
+  margin: 60px 0 20px 0;
+  color: #000;
+  text-align: center;     /* opcional */
+}
+
+/* Texto Primary User Flow */
+.primaryflow-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 800px;       /* controla largura máxima */
+  margin: 0 auto 40px auto;
+  text-align: center;     /* centraliza o texto */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Título Secondary User Flow */
+.secondaryflow-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;       /* negrito */
+  letter-spacing: 3.2px;
+  margin: 40px 0 20px 0;
+  color: #000;
+  text-align: center;     /* opcional */
+}
+
+
+/* Texto Secondary User Flow */
+.secondaryflow-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1100px;       /* controla largura máxima */
+  margin: 0 auto 40px auto;
+  text-align: center;     /* centraliza o texto */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Título Usability Testing */
+.usability-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;       /* negrito */
+  letter-spacing: 3.2px;
+  margin: 200px 0 20px 0;
+  color: #000;
+  text-align: center;     /* opcional */
+}
+
+
+
+/* Label em negrito */
+.usability-label {
+  display: block;
+  font-family: 'Martel', serif;
+  font-size: 22px;
+  font-weight: 700;       /* negrito */
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+/* Texto normal */
+.usability-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  color: #000;
+  text-align: center;
+}
+
+
+/* Container dos três textos */
+.usability-details {
+  display: flex;              /* coloca lado a lado */
+  justify-content: center;    /* centraliza horizontalmente */
+  gap: 200px;                 /* espaço entre os blocos */
+  margin: 60px auto;
+  max-width: 1000px;          /* controla largura máxima */
+}
+
+/* Cada item */
+.usability-item {
+  text-align: center;
+  max-width: 250px;           /* controla largura de cada bloco */
+}
+
+/* Label em negrito */
+.usability-label {
+  display: block;
+  font-family: 'Martel', serif;
+  font-size: 22px;
+  font-weight: 700;           /* negrito */
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+/* Texto normal */
+.usability-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  color: #000;
+}
+
+/* ===== Responsivo: telas pequenas ===== */
+@media (max-width: 768px) {
+  .usability-details {
+    flex-direction: column;   /* empilha os blocos */
+    align-items: center;      /* centraliza verticalmente */
+    gap: 32px;                /* reduz espaço entre eles */
+    padding: 0 16px;          /* respiro lateral */
+    max-width: 100%;          /* libera largura */
+  }
+
+  .usability-item {
+    max-width: 100%;          /* cada item ocupa largura fluida */
+  }
+
+  .usability-label {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+
+  .usability-text {
+    font-size: 18px;
+    letter-spacing: 1.2px;
+  }
+}
+
+/* Container exclusivo para Duration */
+.usability-duration {
+  display: flex;
+  justify-content: center;   /* centraliza o item */
+  margin: 40px auto;
+}
+
+/* Reaproveita estilos já definidos */
+.usability-item {
+  text-align: center;
+  max-width: 250px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Título Findings */
+.findings-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;       /* negrito */
+  letter-spacing: 3.2px;
+  margin: 150px 0 20px 0;
+  color: #000;
+  text-align: center;     /* opcional */
+}
+
+
+/* Texto Findings */
+.findings-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 800px;       /* controla largura máxima */
+  margin: 0 auto 40px auto;
+  text-align: center;     /* centraliza o texto */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Texto Low-Fidelity Prototype */
+.lowfi-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 800px;       /* controla largura máxima */
+  margin: 0 auto 0px auto;
+  text-align: center;     /* centraliza o texto */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Imagem 7 do Projeto Doa */
+.doa-image7 {
+  display: block;
+  max-width: 600px;        /* controla largura máxima */
+  width: 100%;             /* ocupa toda a largura disponível */
+  height: auto;            /* mantém proporção */
+  margin: 90px auto 60px;  /* centraliza horizontalmente e dá espaçamento */
+  border-radius: 0px;     /* bordas arredondadas */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Título High-Fidelity Prototype */
+.highfi-title {
+  font-family: 'Martel', serif;
+  font-size: 32px;
+  font-weight: 700;       /* negrito */
+  letter-spacing: 3.2px;
+  margin: 150px 0 20px 0;
+  color: #000;
+  text-align: center;     /* opcional */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Imagem 8 do Projeto Doa */
+.doa-image8 {
+  display: block;
+  max-width: 700px;        /* controla largura máxima */
+  width: 100%;             /* ocupa toda a largura disponível */
+  height: auto;            /* mantém proporção */
+  margin: 60px auto 30px;  /* centraliza horizontalmente e dá espaçamento */
+  border-radius: 0px;     /* bordas arredondadas */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Texto High-Fidelity Prototype */
+.highfi-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1100px;       /* controla largura máxima */
+  margin: 0 auto 0px auto;
+  text-align: center;     /* centraliza o texto */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Imagem 9 do Projeto Doa */
+.doa-image9 {
+  display: block;
+  max-width: 950px;        /* controla largura máxima */
+  width: 100%;             /* ocupa toda a largura disponível */
+  height: auto;            /* mantém proporção */
+  margin: 40px auto 60px;  /* centraliza horizontalmente e dá espaçamento */
+  border-radius: 0px;     /* bordas arredondadas */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container da imagem + texto */
+.image10-block {
+  display: flex;
+  justify-content: center;   /* centraliza o conjunto */
+  align-items: center;       /* alinha verticalmente */
+  gap: 40px;                 /* espaço entre imagem e texto */
+  margin: 90px auto 60px;
+  max-width: 1000px;
+}
+
+/* Imagem 10 */
+.doa-image10 {
+  max-width: 400px;          /* controla tamanho da imagem */
+  width: 100%;
+  height: auto;
+  border-radius: 0px;
+}
+
+/* Texto ao lado direito */
+.image10-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 500px;          /* controla largura do texto */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Imagem 11 do Projeto Doa */
+.doa-image11 {
+  display: block;
+  max-width: 650px;        /* controla largura máxima */
+  width: 100%;             /* ocupa toda a largura disponível */
+  height: auto;            /* mantém proporção */
+  margin: 40px auto 60px;  /* centraliza horizontalmente e dá espaçamento */
+  border-radius: 0px;     /* bordas arredondadas */
+  margin-left: 450px;        /* empurra a imagem mais para a direita */
+}
+
+
+/* Responsivo: telas pequenas */
+@media (max-width: 768px) {
+  .doa-image11 {
+    margin-left: 0;        /* remove deslocamento */
+    max-width: 100%;       /* ocupa largura total */
+    margin: 24px auto 40px;/* centraliza novamente */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Texto sobre componentes reutilizáveis */
+.components-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1200px;       /* controla largura máxima */
+  margin: 0 auto 40px auto;
+  text-align: center;     /* centraliza o texto */
+}
+
+
+
+
+
+
+
+
+
+
+/* Imagem 12 do Projeto Doa */
+.doa-image12 {
+  display: block;
+  max-width: 700px;        /* controla largura máxima */
+  width: 100%;             /* ocupa toda a largura disponível */
+  height: auto;            /* mantém proporção */
+  margin: 40px auto 60px;  /* centraliza horizontalmente e dá espaçamento */
+  border-radius: 0px;     /* bordas arredondadas */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Texto High-Fidelity Prototype */
+.highfi-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1200px;       /* controla largura máxima */
+  margin: 0 auto 40px auto;
+  text-align: center;     /* centraliza o texto */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container da imagem + conteúdo */
+.image13-block {
+  display: flex;
+  justify-content: center;   /* centraliza o conjunto */
+  align-items: center;   /* alinha topo da imagem e texto */
+  gap: 90px;                 /* espaço entre imagem e texto */
+  margin: 100px auto 60px;
+  max-width: 1100px;
+}
+
+/* Imagem 13 */
+.doa-image13 {
+  max-width: 325px;          /* controla tamanho da imagem */
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Conteúdo ao lado direito */
+.image13-content {
+  max-width: 600px;
+}
+
+/* Título */
+.image13-title {
+  font-family: 'Martel', serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* Texto */
+.image13-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Responsivo: telas pequenas ===== */
+@media (max-width: 768px) {
+  /* Blocos com imagem + texto lateral */
+  .image10-block,
+  .image13-block {
+    flex-direction: column;     /* empilha imagem e texto */
+    align-items: center;        /* centraliza o conjunto */
+    gap: 24px;                  /* reduz espaço para mobile */
+    padding: 0 16px;            /* respiro nas laterais */
+    max-width: 100%;            /* libera largura */
+  }
+
+  /* Imagens: ocupam largura total com limite saudável */
+  .doa-image10,
+  .doa-image13 {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Conteúdo de texto: centralizado e com largura fluida */
+  .image10-text,
+  .image13-content {
+    max-width: 680px;           /* limite para leitura confortável */
+    width: 100%;
+    text-align: center;         /* alinha para mobile */
+  }
+
+  /* Tipografia: levemente menor para caber melhor */
+  .image13-title {
+    font-size: clamp(22px, 3.5vw, 28px);
+    letter-spacing: 2px;
+  }
+  .image10-text,
+  .image13-text {
+    font-size: clamp(17px, 2.6vw, 20px);
+    letter-spacing: 1.6px;
+    line-height: 1.7;
+  }
+}
+
+/* Opcional: melhora o wrap em telas médias */
+@media (max-width: 1024px) {
+  .image10-block,
+  .image13-block {
+    gap: 32px;
+    padding: 0 24px;
+  }
+  .doa-image10,
+  .doa-image13 {
+    max-width: 460px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Título Secondary User Flow */
+.secondary-title {
+  font-family: 'Martel', serif;
+  font-size: 28px;
+  font-weight: 700;       /* negrito */
+  letter-spacing: 2.5px;
+  margin: 40px 0 10px 0;
+  color: #000;
+  text-align: center;     /* centraliza o título */
+}
+
+
+
+
+
+
+
+
+
+
+/* Texto Secondary User Flow */
+.secondary-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1250px;       /* controla largura máxima */
+  margin: 0 auto 40px auto;
+  text-align: center;     /* centraliza o texto */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Título Responsive Designs */
+.responsive-title {
+  font-family: 'Martel', serif;
+  font-size: 28px;
+  font-weight: 700;        /* negrito */
+  letter-spacing: 2.5px;
+  margin: 180px 0 20px 0;
+  color: #000;
+  text-align: center;      /* centraliza o título */
+}
+
+/* Texto Responsive Designs */
+.responsive-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1150px;       /* controla largura máxima */
+  margin: 0 auto 40px auto;
+  text-align: center;     /* centraliza o texto */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Imagem 14 do Projeto Doa */
+.doa-image14 {
+  display: block;
+  max-width: 750px;        /* controla largura máxima */
+  width: 100%;             /* ocupa toda a largura disponível */
+  height: auto;            /* mantém proporção */
+  margin: 40px auto 60px;  /* centraliza horizontalmente e dá espaçamento */
+  border-radius: 0px;     /* bordas arredondadas */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Título Conclusions */
+.conclusions-title {
+  font-family: 'Martel', serif;
+  font-size: 28px;
+  font-weight: 700;        /* negrito */
+  letter-spacing: 2.5px;
+  margin: 200px 0 20px 0;
+  color: #000;
+  text-align: center;      /* centraliza o título */
+}
+
+
+
+/* Subtítulo Impact */
+.impact-subtitle {
+  font-family: 'Martel', serif;
+  font-size: 22px;
+  font-weight: 700;        /* negrito */
+  letter-spacing: 2px;
+  margin: 35px 0 15px 0;
+  color: #000;
+  text-align: center;      /* centraliza o subtítulo */
+}
+
+
+/* Texto Impact */
+.impact-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1100px;       /* controla largura máxima */
+  margin: 0 auto 40px auto;
+  text-align: center;     /* centraliza o texto */
+}
+
+.impact-text em {
+  font-weight: 700;       /* destaca a introdução da citação */
+  font-style: normal;     /* mantém estilo consistente */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Subtítulo What I Learned */
+.learned-subtitle {
+  font-family: 'Martel', serif;
+  font-size: 22px;
+  font-weight: 700;        /* negrito */
+  letter-spacing: 2px;
+  margin: 90px 0 15px 0;
+  color: #000;
+  text-align: center;      /* centraliza o subtítulo */
+}
+
+
+/* Texto What I Learned */
+.learned-text {
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  color: #000;
+  max-width: 1200px;       /* controla largura máxima */
+  margin: 0 auto 40px auto;
+  text-align: center;     /* centraliza o texto */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Frase final Let's Connect */
+.connect-title {
+  font-family: 'Martel', serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-align: center;
+  margin: 200px 0 200px 0;
+
+  /* Estilo moderno e alegre */
+  color: #ff4081;              /* rosa vibrante */
+  background: linear-gradient(90deg, #ff4081, #ff9800, #4caf50, #2196f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: pulse 3s infinite; /* animação suave */
+}
+
+/* Animação de leve brilho/pulso */
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}

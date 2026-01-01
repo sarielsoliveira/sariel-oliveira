@@ -1,83 +1,65 @@
-/* sea.css - Estilos específicos da página Sea - VERSÃO COM LIGHTBOX DO WATER */
+/* sea.css - ESTILOS ESPECÍFICOS DA PÁGINA SEA (VERSÃO LIMPA) */
 
-/* RESET BÁSICO PARA O CONTEÚDO SEA */
+/* CONTEÚDO PRINCIPAL */
 .sea-content {
-    margin: 100px auto !important;
-    max-width: 1280px !important;
-    padding: 0 64px !important;
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
+    margin: 100px auto 0;
+    max-width: 1280px;
+    padding: 0 64px;
+    opacity: 1;
 }
 
-/* CABEÇALHO - ESTILOS GARANTIDOS */
+/* CABEÇALHO */
 .sea-header {
-    margin-bottom: 80px !important;
-    text-align: center !important;
-    display: block !important;
-    width: 100% !important;
-    position: relative !important;
+    margin-bottom: 80px;
+    text-align: center;
 }
 
 .sea-title-container {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    padding: 24px 120px !important;
-    margin-bottom: 24px !important;
-    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 120px;
+    margin-bottom: 24px;
 }
 
 .sea-title {
-    font-family: 'Martel', serif !important;
-    font-size: 32px !important;
-    font-weight: 700 !important;
-    color: #2A4F3F !important;
-    text-align: center !important;
-    letter-spacing: 3.2px !important;
-    line-height: 42px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    width: 100% !important;
+    font-family: 'Martel', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #2A4F3F;
+    text-align: center;
+    letter-spacing: 3.2px;
+    line-height: 42px;
+    margin: 0;
 }
 
 .sea-description {
-    padding: 0 10px !important;
-    margin-bottom: 64px !important;
-    display: block !important;
-    width: 100% !important;
-    text-align: center !important;
-    visibility: visible !important;
-    opacity: 1 !important;
+    padding: 0 10px;
+    margin-bottom: 64px;
+    text-align: center;
 }
 
 .sea-description p,
 .sea-description-bottom p {
-    font-family: 'Martel', serif !important;
-    font-size: 20px !important;
-    font-weight: 300 !important;
-    color: #000000 !important;
-    text-align: center !important;
-    line-height: 42px !important;
-    letter-spacing: 2px !important;
-    max-width: 1200px !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    display: block !important;
+    font-family: 'Martel', serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #000000;
+    text-align: center;
+    line-height: 42px;
+    letter-spacing: 2px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .sea-description-bottom {
-    padding: 0 10px !important;
-    margin: 64px 0 !important;
-    display: flex !important;
-    justify-content: center !important;
-    width: 100% !important;
+    padding: 0 10px;
+    margin: 64px 0;
+    display: flex;
+    justify-content: center;
 }
 
-/* Galeria - mantém igual */
+/* GALERIA */
 .sea-gallery {
     display: flex;
     flex-direction: column;
@@ -85,7 +67,7 @@
     margin-bottom: 100px;
 }
 
-/* Tipos de imagens - SEM SOMBRA POR PADRÃO */
+/* TIPOS DE IMAGENS */
 .sea-image-full {
     padding: 0 111px;
 }
@@ -94,7 +76,6 @@
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 0px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -115,7 +96,6 @@
     flex: 1;
     max-width: 50%;
     height: auto;
-    border-radius: 0px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -133,7 +113,6 @@
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 0px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -151,7 +130,6 @@
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 0px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -161,9 +139,7 @@
     box-shadow: 0 8px 25px rgba(42, 79, 63, 0.15);
 }
 
-/* =========================================
-   LIGHTBOX - VERSÃO DO WATER (COM ZOOM E ARRASTE)
-   ========================================= */
+/* LIGHTBOX (mantenha como está) */
 .lightbox {
     display: none;
     position: fixed;
@@ -171,7 +147,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #ffffff; /* FUNDO BRANCO SÓLIDO */
+    background-color: #ffffff;
     z-index: 9999;
     justify-content: center;
     align-items: center;
@@ -201,7 +177,6 @@
     object-fit: contain;
     user-select: none;
     cursor: grab;
-    border-radius: 0px !important; /* SEM BORDER RADIUS */
     transition: opacity 0.3s ease;
 }
 
@@ -217,7 +192,7 @@
     position: absolute;
     top: 20px;
     right: 30px;
-    color: #333; /* COR PRETA PARA CONTRASTAR COM FUNDO BRANCO */
+    color: #333;
     font-size: 45px;
     cursor: pointer;
     z-index: 10001;
@@ -233,13 +208,13 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: #333; /* COR PRETA PARA CONTRASTAR COM FUNDO BRANCO */
+    color: #333;
     font-size: 50px;
     cursor: pointer;
     padding: 20px;
     z-index: 10001;
     transition: color 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.5); /* FUNDO BRANCO SEMI-TRANSPARENTE */
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
 }
 
@@ -256,12 +231,11 @@
     right: 10px;
 }
 
-/* Contador e legenda - AJUSTADOS PARA FUNDO BRANCO */
 .lightbox-counter {
     position: absolute;
     bottom: 30px;
     right: 60px;
-    color: #666; /* COR CINZA PARA CONTRASTAR COM FUNDO BRANCO */
+    color: #666;
     font-family: 'Martel', serif;
     font-size: 18px;
     letter-spacing: 1px;
@@ -273,7 +247,7 @@
     bottom: 60px;
     left: 0;
     width: 100%;
-    color: #666; /* COR CINZA PARA CONTRASTAR COM FUNDO BRANCO */
+    color: #666;
     font-family: 'Martel', serif;
     font-size: 16px;
     text-align: center;
@@ -282,73 +256,47 @@
     z-index: 10001;
 }
 
-/* Garante que as setas tenham uma transição suave ao sumir */
-.lightbox-prev,
-.lightbox-next {
-    transition: opacity 0.3s ease, visibility 0.3s ease, color 0.3s ease;
-}
-
-/* =========================================
-   RESPONSIVIDADE MOBILE - IMAGENS MAIS LARGAS
-   ========================================= */
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
     .sea-content {
-        margin: 50px auto !important;
-        padding: 0 5px !important; /* REDUZIDO PARA AS IMAGENS OCUPAREM MAIS ESPAÇO */
-        max-width: 100% !important; /* OCUPA TODA A LARGURA */
+        margin: 50px auto 0;
+        padding: 0 15px;
+        max-width: 100%;
     }
 
     .sea-title {
-        font-size: 28px !important;
-        letter-spacing: 2.8px !important;
-        line-height: 36px !important;
+        font-size: 28px;
+        letter-spacing: 2.8px;
+        line-height: 36px;
     }
 
     .sea-description p,
     .sea-description-bottom p {
-        font-size: 18px !important;
-        line-height: 32px !important;
-        letter-spacing: 1.8px !important;
-        padding: 0 15px !important; /* MANTÉM UM POUCO DE PADDING NO TEXTO */
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: 1.8px;
     }
 
     .sea-title-container {
-        padding: 20px 10px !important; /* REDUZIDO PARA OCUPAR MAIS ESPAÇO */
+        padding: 20px;
     }
 
-    /* TODAS AS IMAGENS OCUPAM QUASE 100% DA LARGURA */
     .sea-image-full,
     .sea-image-vertical,
     .sea-image-wide {
-        padding: 0 5px !important; /* MÍNIMO PADDING PARA NÃO COLAR NAS BORDAS */
-        width: 100%;
+        padding: 0;
     }
     
-    /* GARANTE QUE AS IMAGENS LARGAS FICARÃO MAIS LARGAS */
-    .sea-image-wide {
-        padding: 0 5px !important;
-    }
-    
-    .sea-image-full .sea-img,
-    .sea-image-vertical .sea-img-vertical,
-    .sea-image-wide .sea-img-wide {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    /* LINHAS DE IMAGENS VIRAM COLUNA */
     .sea-image-row {
         flex-direction: column;
         gap: 20px;
-        padding: 0 5px !important;
+        padding: 0;
     }
 
     .sea-img-half {
-        max-width: 100% !important;
-        width: 100% !important;
+        max-width: 100%;
     }
 
-    /* REDUZ O ESPAÇO ENTRE AS IMAGENS */
     .sea-gallery {
         gap: 40px;
         margin-bottom: 80px;
@@ -387,70 +335,24 @@
 
 @media (max-width: 480px) {
     .sea-content {
-        margin: 30px auto !important;
-        padding: 0 2px !important; /* PRATICAMENTE SEM PADDING */
+        margin: 30px auto 0;
+        padding: 0 10px;
     }
 
     .sea-title {
-        font-size: 24px !important;
-        letter-spacing: 2.4px !important;
-        line-height: 32px !important;
+        font-size: 24px;
+        letter-spacing: 2.4px;
+        line-height: 32px;
     }
 
     .sea-description p,
     .sea-description-bottom p {
-        font-size: 16px !important;
-        line-height: 28px !important;
-        letter-spacing: 1.6px !important;
-        padding: 0 10px !important;
-    }
-
-    /* IMAGENS OCUPAM PRATICAMENTE 100% DA TELA */
-    .sea-image-full,
-    .sea-image-vertical,
-    .sea-image-wide,
-    .sea-image-row {
-        padding: 0 2px !important;
-    }
-    
-    /* IMAGENS LARGAS ESPECIALMENTE GRANDES */
-    .sea-image-wide .sea-img-wide {
-        width: calc(100vw - 4px) !important; /* OCUPA QUASE TODA A LARGURA VISÍVEL */
-        margin-left: -2px;
-        margin-right: -2px;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 1.6px;
     }
 
     .sea-gallery {
         gap: 30px;
-    }
-}
-
-/* ADICIONAL: PARA TELAS MUITO PEQUENAS (iPhone SE, etc) */
-@media (max-width: 375px) {
-    .sea-content {
-        margin: 20px auto !important;
-        padding: 0 !important;
-    }
-    
-    .sea-title-container {
-        padding: 15px 5px !important;
-    }
-    
-    .sea-image-full,
-    .sea-image-vertical,
-    .sea-image-wide,
-    .sea-image-row {
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-    
-    .sea-image-wide .sea-img-wide {
-        width: 100vw !important;
-        margin-left: 0;
-        margin-right: 0;
-    }
-    
-    .sea-gallery {
-        gap: 25px;
     }
 }

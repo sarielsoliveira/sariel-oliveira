@@ -1,4 +1,4 @@
-/* Sea.css - ESTILOS CORRIGIDOS */
+/* Sea.css - ESTILOS CORRIGIDOS PARA TODOS OS TAMANHOS DE TELA */
 
 /* RESET E BASE */
 .sea-content {
@@ -10,7 +10,7 @@
     opacity: 1 !important;
 }
 
-/* CABEÇALHO */
+/* CABEÇALHO - ESTILOS PARA DESKTOP (aplicam-se por padrão) */
 .sea-header {
     margin-bottom: 80px;
     text-align: center;
@@ -260,7 +260,7 @@
     z-index: 10001;
 }
 
-/* RESPONSIVIDADE */
+/* RESPONSIVIDADE PARA MOBILE */
 @media (max-width: 768px) {
     .sea-content {
         margin: 50px auto 0;
@@ -368,5 +368,22 @@
     
     .sea-gallery {
         gap: 30px;
+    }
+}
+
+/* GARANTIR QUE O CONTEÚDO SEJA VISÍVEL EM TELAS GRANDES (desktop) */
+@media (min-width: 769px) {
+    .sea-content {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .sea-title, 
+    .sea-description, 
+    .sea-description-bottom {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 }

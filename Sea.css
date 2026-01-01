@@ -1,17 +1,20 @@
-/* sea.css - ESTILOS ESPECÍFICOS DA PÁGINA SEA (VERSÃO LIMPA) */
+/* Sea.css - ESTILOS CORRIGIDOS */
 
-/* CONTEÚDO PRINCIPAL */
+/* RESET E BASE */
 .sea-content {
     margin: 100px auto 0;
     max-width: 1280px;
     padding: 0 64px;
-    opacity: 1;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 /* CABEÇALHO */
 .sea-header {
     margin-bottom: 80px;
     text-align: center;
+    width: 100%;
 }
 
 .sea-title-container {
@@ -20,6 +23,7 @@
     align-items: center;
     padding: 24px 120px;
     margin-bottom: 24px;
+    width: 100%;
 }
 
 .sea-title {
@@ -31,11 +35,17 @@
     letter-spacing: 3.2px;
     line-height: 42px;
     margin: 0;
+    padding: 0;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
 }
 
 .sea-description {
     padding: 0 10px;
     margin-bottom: 64px;
+    width: 100%;
     text-align: center;
 }
 
@@ -50,6 +60,8 @@
     letter-spacing: 2px;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0;
+    display: block;
 }
 
 .sea-description-bottom {
@@ -57,9 +69,10 @@
     margin: 64px 0;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
-/* GALERIA */
+/* GALERIA DE IMAGENS (mantenha seu código atual) */
 .sea-gallery {
     display: flex;
     flex-direction: column;
@@ -67,7 +80,6 @@
     margin-bottom: 100px;
 }
 
-/* TIPOS DE IMAGENS */
 .sea-image-full {
     padding: 0 111px;
 }
@@ -139,7 +151,7 @@
     box-shadow: 0 8px 25px rgba(42, 79, 63, 0.15);
 }
 
-/* LIGHTBOX (mantenha como está) */
+/* LIGHTBOX (mantenha seu código atual) */
 .lightbox {
     display: none;
     position: fixed;
@@ -178,14 +190,6 @@
     user-select: none;
     cursor: grab;
     transition: opacity 0.3s ease;
-}
-
-#lightbox-image.can-drag {
-    cursor: grab;
-}
-
-#lightbox-image.dragging {
-    cursor: grabbing;
 }
 
 .lightbox-close {
@@ -275,26 +279,29 @@
         font-size: 18px;
         line-height: 32px;
         letter-spacing: 1.8px;
+        padding: 0 15px;
     }
 
     .sea-title-container {
-        padding: 20px;
+        padding: 20px 10px;
     }
 
     .sea-image-full,
     .sea-image-vertical,
     .sea-image-wide {
-        padding: 0;
+        padding: 0 5px;
+        width: 100%;
     }
     
     .sea-image-row {
         flex-direction: column;
         gap: 20px;
-        padding: 0;
+        padding: 0 5px;
     }
 
     .sea-img-half {
         max-width: 100%;
+        width: 100%;
     }
 
     .sea-gallery {
@@ -302,7 +309,6 @@
         margin-bottom: 80px;
     }
 
-    /* Ajustes do Lightbox para Mobile */
     .lightbox-prev,
     .lightbox-next {
         display: none;
@@ -350,8 +356,16 @@
         font-size: 16px;
         line-height: 28px;
         letter-spacing: 1.6px;
+        padding: 0 10px;
     }
 
+    .sea-image-full,
+    .sea-image-vertical,
+    .sea-image-wide,
+    .sea-image-row {
+        padding: 0 2px;
+    }
+    
     .sea-gallery {
         gap: 30px;
     }

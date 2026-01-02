@@ -194,264 +194,36 @@ setTimeout(() => {
 
 
 
+// utilitário para observar e revelar um seletor
+function observeOnce(selector, options = { threshold: 0.12, rootMargin: '0px 0px -12% 0px' }) {
+  const el = document.querySelector(selector);
+  if (!el) return; // não quebra se o elemento não existir
 
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.querySelector(".logo-uiux");
-  const title = document.querySelector(".logo-title");
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          container.classList.add("animate"); 
-          title.classList.add("animate");     // título com delay
-          observer.unobserve(container);
-        }
-      });
-    },
-    { threshold: 0.3 }
-  );
-
-  observer.observe(container);
-});
-
-
-
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const doa = document.querySelector(".project-doa");
-
-  const observer = new IntersectionObserver((entries) => {
+  const obs = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        doa.classList.add("animate");
-        observer.unobserve(doa); // só revela uma vez
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.3 }); // dispara quando ~30% visível
-
-  observer.observe(doa);
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const artOrbit = document.querySelector(".project-ArtOrbit");
-
-  if (!artOrbit) return; // segurança: só roda se o elemento existir
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        artOrbit.classList.add("animate");
-        observer.unobserve(artOrbit); // só revela uma vez
-      }
-    });
-  }, { threshold: 0.3 }); // dispara quando ~30% visível
-
-  observer.observe(artOrbit);
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const pawme = document.querySelector(".project-pawme");
-  if (!pawme) return;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        pawme.classList.add("animate");
-        observer.unobserve(pawme);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  observer.observe(pawme);
-});
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const audiovisual = document.querySelector(".logo-audiovisual");
-  const title = audiovisual.querySelector(".logo-title");
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        audiovisual.classList.add("animate");
-        title.classList.add("animate");
-        observer.unobserve(audiovisual);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  observer.observe(audiovisual);
-});
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const description = document.querySelector(".logo-description");
-  if (!description) return;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        description.classList.add("animate");
-        observer.unobserve(description);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  observer.observe(description);
-});
-
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const logoVideo = document.querySelector(".logo-video");
-  if (!logoVideo) return;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        logoVideo.classList.add("animate");
-        observer.unobserve(logoVideo);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  observer.observe(logoVideo);
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const fineartLogo = document.querySelector(".logo-fineart");
-  if (!fineartLogo) return;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        fineartLogo.classList.add("animate");
-        observer.unobserve(fineartLogo);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  observer.observe(fineartLogo);
-});
-
-
-
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const lightContainer = document.querySelector(".light-container");
-  const title = lightContainer.querySelector(".light-title");
-  const description = lightContainer.querySelector(".light-description");
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        lightContainer.classList.add("animate");
-        title.classList.add("animate");
-        description.classList.add("animate");
-        observer.unobserve(lightContainer);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  observer.observe(lightContainer);
-});
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const seaContainer = document.querySelector(".sea-container");
-  const title = seaContainer.querySelector(".sea-title");
-  const description = seaContainer.querySelector(".sea-description");
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        seaContainer.classList.add("animate");
-        title.classList.add("animate");
-        description.classList.add("animate");
-        observer.unobserve(seaContainer);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  observer.observe(seaContainer);
+  }, options);
+
+  obs.observe(el);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // liste aqui todos os seletores que quer revelar
+  observeOnce('.logo-uiux', { threshold: 0.12, rootMargin: '0px 0px -15% 0px' });
+  observeOnce('.project-doa');
+  observeOnce('.project-ArtOrbit');
+  observeOnce('.project-pawme');
+  observeOnce('.logo-audiovisual');
+  observeOnce('.logo-description');
+  observeOnce('.logo-video');
+  observeOnce('.logo-fineart');
+  observeOnce('.light-container');
+  observeOnce('.sea-container');
+  observeOnce('.time-container');
 });
 
 
@@ -473,21 +245,88 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const timeContainer = document.querySelector(".time-container");
-  const title = timeContainer.querySelector(".time-title");
-  const description = timeContainer.querySelector(".time-description");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        timeContainer.classList.add("animate");
-        title.classList.add("animate");
-        description.classList.add("animate");
-        observer.unobserve(timeContainer);
-      }
-    });
-  }, { threshold: 0.3 });
 
-  observer.observe(timeContainer);
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,68 +1,96 @@
-/* about.css - Estilos específicos da página About */
-
-/* CONTAINER ABOUT */
-.about-container {
-    width: 1243px;
-    height: 900px;
-    background-color: rgba(195, 226, 175, 0.5);
-    margin: 100px auto; /* AJUSTE AQUI: margin-top e margin-bottom */
-    padding: 80px;
+/* ------------------------------
+   RESET MODERNO
+--------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    border-radius: 12px;
 }
 
-.about-title {
-    font-family: 'Kotta One', serif;
-    font-size: 36px;
-    color: #7aa7a7;
-    margin-bottom: 60px;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* ------------------------------
+   HEADER
+--------------------------------*/
+.header {
     text-align: center;
+    margin-bottom: 40px;
 }
 
-.about-text {
-    font-family: 'Martel', serif;
-  font-size: 22px;
-  font-weight: 300;
-  line-height: 1.8; /* equivalente a ~36px */
-  letter-spacing: 2px;
-  color: #000;
+.header h1 {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: bold;
 }
 
+/* ------------------------------
+   CONTAINER PRINCIPAL
+--------------------------------*/
+.container {
+    display: grid;
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+}
 
-/* RESPONSIVO ABOUT */
-@media (max-width: 768px) {
-    .about-container {
-        width: 95%;
-        height: auto;
-        min-height: 1200px;
-        padding: 40px 30px;
-        margin: 50px auto; /* AJUSTE AQUI */
+/* ------------------------------
+   CARTÕES DE CONTEÚDO
+--------------------------------*/
+.about-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.about-card h2 {
+    font-size: clamp(20px, 3vw, 28px);
+    margin-bottom: 12px;
+}
+
+.about-card p {
+    font-size: clamp(15px, 2.5vw, 18px);
+}
+
+/* ------------------------------
+   RESPONSIVIDADE
+--------------------------------*/
+
+/* Tablets */
+@media (max-width: 900px) {
+    .container {
+        padding: 5px;
+        gap: 20px;
     }
-    
-    .about-title {
-        font-size: 32px;
-        margin-bottom: 40px;
-    }
-    
-    .about-text {
-        font-size: 22px;
-        line-height: 1.5;
+
+    .about-card {
+        padding: 20px;
     }
 }
 
-@media (max-width: 480px) {
-    .about-container {
-        padding: 30px 20px;
-        margin: 30px auto; /* AJUSTE AQUI */
+/* Telemóveis */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
     }
-    
-    .about-title {
-        font-size: 28px;
-        margin-bottom: 30px;
+
+    .container {
+        gap: 15px;
     }
-    
-    .about-text {
-        font-size: 18px;
-        line-height: 1.4;
+
+    .about-card {
+        padding: 18px;
     }
 }

@@ -1,96 +1,66 @@
-/* ------------------------------
-   RESET MODERNO
---------------------------------*/
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f4f4;
-    color: #222;
-    line-height: 1.6;
-    padding: 20px;
-}
-
-/* ------------------------------
-   HEADER
---------------------------------*/
-.header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.header h1 {
-    font-size: clamp(28px, 4vw, 42px);
-    font-weight: bold;
-}
-
-/* ------------------------------
-   CONTAINER PRINCIPAL
---------------------------------*/
-.container {
-    display: grid;
-    gap: 25px;
+/* PAGE WRAPPER */
+.about-wrapper {
     max-width: 900px;
-    margin: 0 auto;
-    padding: 10px;
+    margin: 120px auto 60px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
 }
 
-/* ------------------------------
-   CARTÕES DE CONTEÚDO
---------------------------------*/
+/* CARD */
 .about-card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    width: 100%;
 }
 
-.about-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+/* TITLE */
+.about-title {
+    font-family: 'Koulen', sans-serif;
+    font-size: clamp(32px, 5vw, 48px);
+    text-align: center;
+    margin-bottom: 25px;
 }
 
-.about-card h2 {
-    font-size: clamp(20px, 3vw, 28px);
-    margin-bottom: 12px;
+/* TEXT */
+.about-text {
+    font-family: 'Martel', serif;
+    font-size: clamp(16px, 2.5vw, 20px);
+    line-height: 1.7;
+    text-align: justify;
 }
 
-.about-card p {
-    font-size: clamp(15px, 2.5vw, 18px);
+/* ACTIVE NAV LINK */
+.active-link {
+    color: #22A47F !important;
 }
 
-/* ------------------------------
-   RESPONSIVIDADE
---------------------------------*/
-
-/* Tablets */
-@media (max-width: 900px) {
-    .container {
-        padding: 5px;
-        gap: 20px;
-    }
-
+/* RESPONSIVE */
+@media (max-width: 700px) {
     .about-card {
-        padding: 20px;
+        padding: 25px;
+    }
+
+    .about-wrapper {
+        margin-top: 100px;
     }
 }
 
-/* Telemóveis */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-
-    .container {
-        gap: 15px;
-    }
-
+@media (max-width: 480px) {
     .about-card {
         padding: 18px;
+    }
+
+    .about-title {
+        font-size: clamp(28px, 6vw, 40px);
     }
 }

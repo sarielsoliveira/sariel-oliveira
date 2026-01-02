@@ -194,15 +194,42 @@ setTimeout(() => {
 
 
 
-// utilitário para observar e revelar um seletor
+
+// substitua os observers antigos por este bloco
 function observeOnce(selector, options = { threshold: 0.12, rootMargin: '0px 0px -12% 0px' }) {
   const el = document.querySelector(selector);
-  if (!el) return; // não quebra se o elemento não existir
+  if (!el) return;
 
   const obs = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('animate');
+
+        const childSelectors = [
+          '.logo-title',
+          '.light-title', '.light-description',
+          '.sea-title', '.sea-description',
+          '.time-title', '.time-description',
+          '.logo-description', '.logo-video .video-box', '.logo-fineart .logo-image',
+          '.project-doa .image-box', '.project-doa .video-box',
+          '.project-ArtOrbit .image-box', '.project-ArtOrbit .video-box',
+          '.project-pawme .image-box', '.project-pawme .video-box'
+        ];
+
+        childSelectors.forEach(sel => {
+          const child = entry.target.querySelector(sel);
+          if (child) child.classList.add('animate');
+        });
+
+        if (selector === '.logo-uiux') {
+          const uiuxTitle = document.querySelector('.logo-uiux .logo-title');
+          if (uiuxTitle) uiuxTitle.classList.add('animate');
+        }
+        if (selector === '.logo-audiovisual') {
+          const avTitle = document.querySelector('.logo-audiovisual .logo-title');
+          if (avTitle) avTitle.classList.add('animate');
+        }
+
         observer.unobserve(entry.target);
       }
     });
@@ -212,7 +239,6 @@ function observeOnce(selector, options = { threshold: 0.12, rootMargin: '0px 0px
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // liste aqui todos os seletores que quer revelar
   observeOnce('.logo-uiux', { threshold: 0.12, rootMargin: '0px 0px -15% 0px' });
   observeOnce('.project-doa');
   observeOnce('.project-ArtOrbit');

@@ -1,66 +1,91 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
+/* about.css - Estilos específicos da página About (RESPONSIVO, mantendo visual original) */
+
+/* CONTAINER ABOUT - mantive cor, borda e estilo visual */
+.about-container {
+    max-width: 1243px;            /* preserva largura máxima original em telas grandes */
+    width: 95%;                   /* permite encolher em telas menores */
+    margin: 100px auto;           /* mantém espaçamento vertical parecido com o original */
+    padding: 80px;
     box-sizing: border-box;
+    border-radius: 12px;
+    background-color: rgba(195, 226, 175, 0.5); /* cor original preservada */
 }
 
-/* PAGE WRAPPER */
-.about-wrapper {
-    max-width: 900px;
-    margin: 120px auto 60px auto;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-/* CARD */
-.about-card {
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 14px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-    width: 100%;
-}
-
-/* TITLE */
+/* TÍTULO - mesma família e cor aproximada */
 .about-title {
-    font-family: 'Koulen', sans-serif;
-    font-size: clamp(32px, 5vw, 48px);
+    font-family: 'Kotta One', serif;
+    font-size: 36px;
+    color: #7aa7a7;
+    margin-bottom: 60px;
     text-align: center;
-    margin-bottom: 25px;
 }
 
-/* TEXT */
+/* TEXTO - mantém Martel, peso e letter-spacing */
 .about-text {
     font-family: 'Martel', serif;
-    font-size: clamp(16px, 2.5vw, 20px);
-    line-height: 1.7;
-    text-align: justify;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.8; /* equivalente ao que você tinha */
+    letter-spacing: 2px;
+    color: #000;
 }
 
-/* ACTIVE NAV LINK */
-.active-link {
-    color: #22A47F !important;
+/* Pequeno ajuste para evitar quebras estranhas em palavras longas */
+.about-text, .about-title {
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
-/* RESPONSIVE */
-@media (max-width: 700px) {
-    .about-card {
-        padding: 25px;
+/* RESPONSIVO - ajustes finos mantendo aparência */
+@media (max-width: 1024px) {
+    .about-container {
+        padding: 60px;
+        margin: 80px auto;
     }
 
-    .about-wrapper {
-        margin-top: 100px;
+    .about-title {
+        font-size: 34px;
+        margin-bottom: 50px;
+    }
+
+    .about-text {
+        font-size: 20px;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        width: 92%;
+        padding: 40px 30px;
+        margin: 50px auto;
+    }
+
+    .about-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .about-text {
+        font-size: 20px; /* mantive próximo do original para não alterar visual */
+        line-height: 1.6;
     }
 }
 
 @media (max-width: 480px) {
-    .about-card {
-        padding: 18px;
+    .about-container {
+        width: 96%;
+        padding: 30px 18px;
+        margin: 30px auto;
     }
 
     .about-title {
-        font-size: clamp(28px, 6vw, 40px);
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .about-text {
+        font-size: 18px;
+        line-height: 1.5;
     }
 }
